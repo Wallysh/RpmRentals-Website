@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex"><title>RPM Rentals - Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#000000">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="apple-mobile-web-app-title" content="RPM Admin">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="icon" href="/icon-192.png">
+<style>
+:root{--ink:#0e1116;--mut:#667085;--line:#e1e4ea;--bg:#eceef2;--acc:#d90f26;--accd:#a8091c;--blk:#0a0b0e;--warn:#b45309}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.5 'Barlow',system-ui,sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+main{max-width:1040px;margin:0 auto;padding:0 16px 40px}
+h1{font:700 26px/1.1 'Barlow Condensed',sans-serif;letter-spacing:.03em;text-transform:uppercase;margin:0}
+h2{font:700 22px/1.1 'Barlow Condensed',sans-serif;letter-spacing:.05em;text-transform:uppercase;margin:0 0 14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+h2::before{content:'';width:4px;height:20px;background:var(--acc);border-radius:2px}
+h3{font:700 16px 'Barlow Condensed',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin:18px 0 8px}
+header.brand{position:sticky;top:0;z-index:30;display:flex;justify-content:space-between;align-items:center;margin:0 -16px 18px;padding:10px 16px;padding-top:calc(10px + env(safe-area-inset-top));background:linear-gradient(180deg,#14161b,#0a0b0e);border-bottom:2px solid var(--acc)}
+.brand img{height:46px;max-width:60%;object-fit:contain;border:0;border-radius:0}
+section{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:18px;box-shadow:0 1px 2px rgba(10,11,14,.05),0 14px 30px -18px rgba(10,11,14,.28)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+label{display:block;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--mut)}
+input,select,textarea{width:100%;margin-top:5px;padding:11px 12px;border:1px solid var(--line);border-radius:10px;font:inherit;font-size:15px;font-weight:400;letter-spacing:0;text-transform:none;color:var(--ink);background:#fff}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--acc);box-shadow:0 0 0 3px rgba(217,15,38,.15)}
+button{padding:11px 18px;border:0;border-radius:10px;background:linear-gradient(180deg,#e5152c,#c50c21);color:#fff;font:inherit;font-weight:600;cursor:pointer;box-shadow:0 6px 14px -8px rgba(217,15,38,.8);transition:transform .08s,filter .15s}
+button:hover{filter:brightness(1.07)}button:active{transform:scale(.97)}button:disabled{opacity:.55}
+button.ghost{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:none}button.red{background:#7a0a16;box-shadow:none}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:12px 8px;border-bottom:1px solid var(--line);vertical-align:top}th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);font-weight:600}
+tr.row{cursor:pointer}tr.row:hover{background:#f7f8fa}
+.tag{display:inline-block;padding:3px 10px;border-radius:99px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}.signed{background:#d6f3e9;color:#05603a}.pending{background:#fef0c7;color:var(--warn)}.tag.cancelled{background:#e7e9ee;color:#475467}
+.linkbox{margin-top:12px;padding:14px;background:#fdf1f2;border:1px solid #f6c9ce;border-radius:12px;word-break:break-all;font-weight:500}
+dialog{width:min(840px,94vw);max-height:92vh;overflow:auto;border:0;border-radius:20px;padding:24px;box-shadow:0 30px 80px -20px rgba(0,0,0,.6)}dialog::backdrop{background:rgba(5,6,8,.7);backdrop-filter:blur(3px)}
+dl{display:grid;grid-template-columns:170px 1fr;gap:7px 12px;margin:0 0 14px}dt{color:var(--mut)}dd{margin:0;font-weight:500}
+img{max-width:100%;border:1px solid var(--line);border-radius:10px}.err{color:#b42318;margin-top:8px;font-weight:500}.hide{display:none!important}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}.ch{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-align:center}.cd{min-height:78px;border:1px solid var(--line);border-radius:10px;padding:5px;font-size:12px;background:#fff;overflow:hidden}.cd.bk{background:#fdf1f2;border-color:#f6c9ce}.cd.off{border:0;background:none}.ev{margin-top:3px;padding:2px 5px;border-radius:5px;font-size:11px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.ev.signed{background:#d6f3e9;color:#05603a}.ev.pending{background:#fef0c7;color:#b45309}
+.trow{display:flex;justify-content:space-between;gap:10px;padding:12px 8px;border-bottom:1px solid var(--line);cursor:pointer;border-radius:8px}.trow:hover{background:#f7f8fa}.trow:last-child{border-bottom:0}.late{color:#b42318;font-weight:700}
+.flag{padding:8px 12px;border-radius:10px;margin:5px 0;font-size:13px;font-weight:500}.flag.red{background:#fee4e2;color:#b42318}.flag.amber{background:#fef0c7;color:#b45309}.flag.ok{background:#d6f3e9;color:#05603a}
+a.btn{padding:11px 18px;border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--ink);background:#fff;font-weight:600;font-size:15px}
+.chip{display:inline-flex;gap:8px;align-items:center;background:var(--blk);color:#fff;border-radius:99px;padding:5px 14px;margin:8px 8px 0 0;font-size:13px;font-weight:500}.chip a{cursor:pointer;color:#ff8a98;font-weight:700}
+.nav{display:flex;gap:6px;margin-bottom:18px;flex-wrap:wrap}
+.nav button{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--ink);border:1px solid var(--line);padding:10px 18px;box-shadow:none}
+.nav button.on{background:var(--blk);color:#fff;border-color:var(--blk)}.nav button.on svg{color:#ff3b4f}
+.bdg{position:absolute;top:2px;right:calc(50% - 22px);min-width:18px;height:18px;border-radius:9px;background:var(--acc);color:#fff;font:700 11px/18px Barlow,sans-serif;text-align:center;padding:0 5px;font-style:normal}
+.rq{border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px}.rq.new{border-color:#f6c9ce;background:#fffafa}.rq a{color:var(--ink)}
+.trq{display:flex;justify-content:space-between;gap:10px;padding:12px 8px;border-bottom:1px solid var(--line);cursor:pointer;border-radius:8px}.trq:hover{background:#f7f8fa}
+.nav svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tabs{display:inline-flex;gap:4px;margin-bottom:14px;background:#eceef2;padding:4px;border-radius:12px}.tabs button{background:transparent;color:var(--ink);border:0;padding:9px 24px;box-shadow:none;font-weight:600}.tabs button.on{background:var(--blk);color:#fff}
+.tile{position:relative;cursor:pointer;border:2px solid transparent;border-radius:14px;overflow:hidden;background:#15171c;min-height:96px;transition:transform .12s,border-color .12s}.tile:hover{transform:translateY(-2px)}
+.tile img{width:100%;height:150px;object-fit:cover;display:block;border:0;border-radius:0}
+.tile div{position:absolute;left:0;right:0;bottom:0;padding:34px 12px 10px;background:linear-gradient(transparent,rgba(0,0,0,.88));color:#fff}.tile div b{font:700 19px 'Barlow Condensed',sans-serif;letter-spacing:.04em;text-transform:uppercase}.tile div span{color:#c7ccd4!important}
+.tile.sel{border-color:var(--acc);box-shadow:0 0 0 3px rgba(217,15,38,.25)}.tile.sel::after{content:'\2713';position:absolute;top:8px;right:8px;width:26px;height:26px;border-radius:50%;background:var(--acc);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.car{display:flex;gap:12px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:10px;background:#fff}.car img{width:110px;height:72px;object-fit:cover;border-radius:10px}#carPrev{max-width:260px;border-radius:8px;margin:8px 0;display:block}.fleetgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.lg{text-align:center;margin-bottom:6px}.lg img{height:120px;border:0;border-radius:0}
+#login{min-height:92vh;display:flex;align-items:center;justify-content:center}
+#login section{width:100%;max-width:380px;margin:0;background:linear-gradient(180deg,#14161b,#0a0b0e);border:1px solid #23262d;color:#fff;border-radius:22px;padding:26px}
+#login label{color:#9aa1ad}#login input{background:#16181d;border-color:#2b2f37;color:#fff}#login p{color:#9aa1ad!important}
+.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:end;margin-bottom:14px}.filters label{flex:1 1 140px}.ph3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:18px}
+.stat{background:linear-gradient(180deg,#14161b,#0a0b0e);color:#fff;border-radius:16px;padding:14px 16px;border:1px solid #23262d}
+.stat b{display:block;font:700 40px/1 'Barlow Condensed',sans-serif;letter-spacing:.02em}.stat span{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#9aa1ad}.stat.hot b{color:#ff4258}
+@media(min-width:761px){.nav span{display:inline}}
+@media print{body{background:#fff}main>*:not(dialog),dialog .noprint{display:none!important}dialog{width:100%;position:static}}
+@media(max-width:760px){
+ main{padding:0 12px 100px}header.brand{margin:0 -12px 14px;padding-left:12px;padding-right:12px}.brand img{height:38px}
+ .grid{grid-template-columns:1fr}section{padding:16px;border-radius:14px}
+ .nav{position:fixed;left:0;right:0;bottom:0;z-index:40;margin:0;gap:0;flex-wrap:nowrap;background:rgba(10,11,14,.96);backdrop-filter:blur(10px);border-top:1px solid #23262d;padding:6px 4px calc(6px + env(safe-area-inset-bottom))}
+ .nav button{flex:1;flex-direction:column;gap:2px;background:transparent;color:#9aa1ad;border:0;border-radius:10px;padding:7px 2px;font-size:11px;font-weight:600;letter-spacing:.02em}
+ .nav button.on{background:transparent;color:#fff}.nav svg{width:23px;height:23px}
+ .cal{gap:2px}.cd{min-height:56px;padding:2px;font-size:10px;border-radius:6px}.ev{font-size:9px}dl{grid-template-columns:120px 1fr}dialog{padding:18px;border-radius:16px}
+ .stat b{font-size:34px}
+}
+</style></head><body><main>
+<div id="login" class="hide"><section><div class="lg"><img src="/logo.jpg" alt="RPM Rental Group"></div><p style="color:var(--mut)">Admin sign in</p>
+<label>Password<input id="pw" type="password" autocomplete="current-password"></label><p><button id="loginBtn">Sign in</button></p><div class="err" id="lerr"></div></section></div>
+
+<div id="app" class="hide">
+<header class="brand"><img src="/logo-wide.jpg" alt="RPM Rental Group"><button class="ghost" id="logout">Sign out</button></header>
+<nav class="nav"><button data-p="today" class="on"><svg viewBox="0 0 24 24"><path d="M3 14a9 9 0 1 1 18 0"/><path d="M12 14l4-4"/><circle cx="12" cy="14" r="1"/></svg><span>Today</span></button><button data-p="req" style="position:relative"><svg viewBox="0 0 24 24"><path d="M3 13l3-8h12l3 8"/><path d="M3 13v6h18v-6h-5l-1 2h-6l-1-2z"/></svg><span>Requests</span><i class="bdg hide" id="reqBadge">0</i></button><button data-p="new"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span>New</span></button><button data-p="hist"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span>History</span></button><button data-p="cal"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Calendar</span></button><button data-p="fleet"><svg viewBox="0 0 24 24"><path d="M5 15l1.6-4.6A2 2 0 0 1 8.5 9h7a2 2 0 0 1 1.9 1.4L19 15"/><rect x="3" y="15" width="18" height="4.5" rx="1.5"/><path d="M7 17.2h.01M17 17.2h.01"/></svg><span>Fleet</span></button></nav>
+<div id="p_today" class="hide"><div id="pushBox"></div><div id="todayBox"></div></div>
+<section id="p_req" class="hide"><h2>Booking requests</h2><p style="color:var(--mut);margin:-4px 0 14px">Requests from your public website. Check the details, then create the booking and send the signing link.</p><div id="reqBox"></div></section>
+<section id="p_new" class="hide"><h2>New booking</h2><p id="editBar" class="hide" style="background:#fef0c7;padding:10px;border-radius:8px"><span id="editTxt"></span> <button class="ghost" id="editX">Cancel edit</button></p>
+<div style="margin:0 0 12px"><label style="max-width:420px">Returning customer? Search by name, mobile or email<input id="pfQ" placeholder="Start typing..."></label><div id="pfRes"></div><p id="pfTxt" style="color:#05603a;font-weight:600;margin:6px 0 0"></p></div>
+<div class="tabs"><button data-m="Car" class="on">Cars</button><button data-m="Jet ski">Jet skis</button></div><p style="margin:0 0 6px;color:var(--mut)">Click a vehicle to select it. Click more than one to put several vehicles on one booking (for example a car and a jet ski).</p><div class="fleetgrid" id="pick"></div><div id="selBox"></div><input type="hidden" id="carSel"><p id="agrNote" style="font-weight:600;color:var(--acc)"></p><p><button class="ghost" id="noSel">Clear selection</button></p>
+<div class="grid" id="form" style="margin-top:12px"></div><p id="daysNote" style="color:var(--mut);margin:6px 0 0"></p>
+<p style="display:flex;gap:14px;align-items:end;flex-wrap:wrap"><label style="max-width:200px">Link valid for<select id="linkDays"><option value="7" selected>7 days</option><option value="1">1 day</option><option value="3">3 days</option><option value="14">14 days</option><option value="30">30 days</option><option value="0">No expiry</option></select></label><button id="gen">Create private link</button></p><div class="err" id="gerr"></div>
+<div id="linkout" class="linkbox hide"><div id="linktxt"></div><label style="margin-top:10px;max-width:320px">Customer mobile (optional, for WhatsApp / SMS)<input id="wam" placeholder="04xx xxx xxx"></label><p style="margin:10px 0 0"><button id="copy">Copy link</button> <button id="wa">Send on WhatsApp</button> <button class="ghost" id="smsb">Send by SMS</button></p></div></section>
+<section id="p_hist" class="hide"><h2>Booking history <span id="count" style="font-weight:400;font-size:13px;color:var(--mut)"></span></h2>
+<div class="filters"><label>Search<input id="q" placeholder="Name, vehicle or mobile"></label><label>Status<select id="st"><option value="">All</option><option value="signed">Signed</option><option value="pending">Awaiting signature</option><option value="cancelled">Cancelled</option></select></label><label>Date type<select id="by"><option value="signed">Signed date</option><option value="pickup">Pickup date</option><option value="created">Created date</option></select></label><label>From<input id="from" type="date"></label><label>To<input id="to" type="date"></label><button class="ghost" id="clrf">Clear</button><a class="btn" href="/export/bookings.csv">Download Excel (CSV)</a></div><div style="overflow-x:auto"><table><thead><tr><th>Vehicle</th><th>Customer</th><th>Pickup</th><th>Status</th><th>Signed</th></tr></thead><tbody id="rows"></tbody></table></div><p id="empty" class="hide" style="color:var(--mut)">No bookings yet. Create one above.</p></section>
+<section id="p_cal" class="hide"><h2>Calendar</h2><div class="filters"><label>Vehicle<select id="calCar"></select></label><button class="ghost" id="calPrev">&lt;</button><b id="calTitle" style="min-width:150px;text-align:center"></b><button class="ghost" id="calNext">&gt;</button></div><div class="cal" id="calGrid"></div><p style="color:var(--mut)">Shaded days are booked for the chosen vehicle. Green = signed, yellow = awaiting signature.</p></section>
+<section id="p_fleet" class="hide"><h2>Fleet</h2><p style="color:var(--mut);margin-top:0">Add each model once, for example C63S, E63S or a jet ski, with its photo. Then click it when you create a booking.</p>
+<div class="grid"><label>Name (e.g. C63S, E63S, Sea-Doo GTI)<input id="v_name"></label><label>Type (decides which agreement)<select id="v_type"><option>Car</option><option>Jet ski</option><option>Other</option></select></label><label>Registration<input id="v_rego"></label><label>Daily rate ($)<input id="v_rate" type="number" min="0"></label><label>Security bond ($)<input id="v_bond" type="number" min="0"></label><label>Insurance excess ($)<input id="v_excess" type="number" min="0"></label><label>Photo<input id="v_img" type="file" accept="image/*"></label></div>
+<p><button id="addCar">Add car</button></p><div class="err" id="verr"></div><div class="fleetgrid" id="fleet"></div></section>
+</div>
+<dialog id="dlg"><div id="detail"></div><p class="noprint"><button id="pdf">Download signed PDF</button> <button class="ghost" id="close">Close</button> </p></dialog>
+</main>
+<script>
+const F=[['vehicle','Vehicle (name, e.g. 2022 Toyota Camry)','text'],['rego','Registration','text'],['pickup','Pickup date / time','datetime-local'],['ret','Return date / time','datetime-local'],
+['dailyRate','Daily rate ($)','number'],['totalPrice','Total rental price ($)','number'],['deposit','Booking deposit ($)','number'],['bond','Security bond ($)','number'],
+['includedKm','Included kilometres','text'],['excessKmRate','Excess km rate ($/km)','text'],['excess','Insurance excess ($)','number'],['youngExcess','Young driver excess ($)','number'],
+['holdAmount','Second driving event hold ($)','number'],['pickupLoc','Pickup location','text'],['retLoc','Return location','text'],['hin','Hull ID (jet ski)','text'],['engineHours','Engine hours at handover (jet ski)','text'],['lateFee','Late return fee ($)','number'],['extras','Additional charges','text'],['equipment','Equipment supplied (e.g. lifejackets, lanyard, trailer)','text'],['fuel','Fuel on handover','text'],['towing','Towing authorised?','select:NO,YES'],['dashcamAudio','Dashcam audio enabled?','select:NO,YES'],['notes','Notes shown to customer (optional)','text']];
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const api=async(u,o={})=>{const r=await fetch(u,{headers:{'Content-Type':'application/json'},...o});const j=await r.json().catch(()=>({}));if(!r.ok){if(r.status===401&&u!=='/api/login')show(false);throw new Error(j.error||'Error')}return j};
+$('#form').innerHTML=F.map(([k,l,t])=>`<label data-k="${k}">${l}`+(t.startsWith('select')?`<select id="f_${k}">${t.slice(7).split(',').map(o=>`<option>${o}</option>`).join('')}</select>`:`<input id="f_${k}" type="${t}" ${t==='number'?'min="0" step="0.01"':''} ${k==='fuel'?'value="FULL"':''}>`)+'</label>').join('');
+function show(a){$('#login').classList.toggle('hide',a);$('#app').classList.toggle('hide',!a);if(a){load();loadFleet();loadReq();go(location.hash.slice(1))}}
+$('#loginBtn').onclick=async()=>{try{await api('/api/login',{method:'POST',body:JSON.stringify({password:$('#pw').value})});show(true)}catch(e){$('#lerr').textContent=e.message}};
+$('#pw').onkeydown=e=>{if(e.key==='Enter')$('#loginBtn').click()};
+$('#logout').onclick=async()=>{await api('/api/logout',{method:'POST'});show(false)};
+$('#gen').onclick=async()=>{$('#gerr').textContent='';const s={};F.forEach(([k])=>s[k]=$('#f_'+k).value);s.vehicleIds=sel.slice();s.vehicleId=sel[0]||'';s.mode=mode;s.linkDays=$('#linkDays').value;if(reqId)s.requestId=reqId;if(prefillFrom)s.prefillFrom=prefillFrom;
+ if(sel.length&&s.pickup&&s.ret){const clash=list.find(b=>b.id!=editId&&b.status!=='cancelled'&&vids(b).some(v=>sel.includes(v))&&b.schedule.pickup&&b.schedule.ret&&new Date(b.schedule.pickup)<new Date(s.ret)&&new Date(b.schedule.ret)>new Date(s.pickup));if(clash&&!confirm('Warning: already booked '+fmt(clash.schedule.pickup)+' to '+fmt(clash.schedule.ret)+' ('+(clash.customer?.name||'awaiting signature')+'). Create anyway?'))return}
+ try{const r=editId?await api('/api/bookings/'+editId,{method:'PUT',body:JSON.stringify(s)}):await api('/api/bookings',{method:'POST',body:JSON.stringify(s)});$('#linktxt').textContent=editId?location.origin+'/s/'+(list.find(x=>x.id==editId)||{}).token:r.link;if(editId)cancelEdit();totalTouched=false;prefillFrom=null;reqId=null;bar('');$('#pfTxt').textContent='';$('#linkout').classList.remove('hide');load()}catch(e){$('#gerr').textContent=e.message}};
+$('#copy').onclick=async()=>{await navigator.clipboard.writeText($('#linktxt').textContent);$('#copy').textContent='Copied'};
+let cur=null,list=[],fleet=[];
+async function shrink(file){try{const bm=await createImageBitmap(file);const s=Math.min(1,1600/Math.max(bm.width,bm.height));const cv=document.createElement('canvas');cv.width=Math.round(bm.width*s);cv.height=Math.round(bm.height*s);cv.getContext('2d').drawImage(bm,0,0,cv.width,cv.height);return await new Promise(res=>cv.toBlob(b=>res(b||file),'image/jpeg',0.82))}catch(e){return file}}
+
+async function loadFleet(){fleet=await api('/api/vehicles');
+ renderPick();
+ $('#fleet').innerHTML=fleet.length?fleet.map(v=>`<div class="car"><img src="/api/vehicles/${v.id}/image" onerror="this.style.display='none'"><div><b>${esc(v.name)}</b><br><span style="color:var(--mut);font-size:13px">${esc(v.type||'Car')} ${esc(v.rego||'')}</span><br><button class="ghost" data-ls="${v.id}" data-on="${v.listed==='no'?0:1}">${v.listed==='no'?'Show on website':'Hide from website'}</button> <button class="ghost" data-rm="${v.id}">Remove</button></div></div>`).join(''):'<p style="color:var(--mut)">No cars yet. Add your first one above.</p>';
+ document.querySelectorAll('[data-ls]').forEach(b=>b.onclick=async()=>{await api('/api/vehicles/'+b.dataset.ls+'/listed',{method:'PUT',body:JSON.stringify({listed:b.dataset.on==='0'})});loadFleet()});
+ document.querySelectorAll('[data-rm]').forEach(b=>b.onclick=async()=>{if(confirm('Remove this from your fleet? Existing agreements are not affected.')){await api('/api/vehicles/'+b.dataset.rm,{method:'DELETE'});loadFleet()}})}
+var sel=[];
+function pick(id){if(id===''||id==null)sel=[];else{const k=String(id);sel=sel.includes(k)?sel.filter(x=>x!==k):sel.concat(k)}applySel()}
+function setSel(ids){sel=(ids||[]).map(String);applySel()}
+function applySel(){const vs=sel.map(i=>fleet.find(x=>x.id==i)).filter(Boolean);
+ $('#carSel').value=sel.join(',');
+ document.querySelectorAll('.tile').forEach(t=>t.classList.toggle('sel',sel.includes(String(t.dataset.pick))));
+ const hasJ=vs.some(v=>v.type==='Jet ski'),hasC=vs.some(v=>v.type!=='Jet ski');
+ const jetMode=vs.length?(hasJ&&!hasC):mode==='Jet ski',carMode=vs.length?(hasC&&!hasJ):mode!=='Jet ski';
+ document.querySelectorAll('#form label[data-k]').forEach(l=>{const k=l.dataset.k;l.classList.toggle('hide',(jetMode&&CAR_ONLY.includes(k))||(carMode&&JET_ONLY.includes(k)))});
+ $('#selBox').innerHTML=vs.map(v=>`<span class="chip">${esc(v.name)} <a data-x="${v.id}">&times;</a></span>`).join('');
+ document.querySelectorAll('[data-x]').forEach(x=>x.onclick=()=>pick(x.dataset.x));
+ $('#agrNote').textContent=vs.length?'Customer will sign: '+[hasC?'CAR agreement':'',hasJ?'JET SKI agreement':''].filter(Boolean).join(' + '):'Customer will get the '+(mode==='Jet ski'?'JET SKI':'CAR')+' agreement';
+ if(vs.length){$('#f_vehicle').value=vs.map(v=>v.name).join(' + ');$('#f_rego').value=vs.map(v=>v.rego||'').filter(Boolean).join(', ');
+  const sum=k=>vs.reduce((t,v)=>t+(parseFloat(v[k])||0),0);
+  if(sum('daily_rate'))$('#f_dailyRate').value=sum('daily_rate');if(sum('bond'))$('#f_bond').value=sum('bond');
+  const ex=Math.max(...vs.map(v=>parseFloat(v.excess)||0));if(ex)$('#f_excess').value=ex;autoTotal()}}
+const vids=b=>(b.schedule.items||[]).map(i=>String(i.vehicleId)).concat(b.schedule.vehicleId?[String(b.schedule.vehicleId)]:[]);
+$('#noSel').onclick=()=>pick('');
+const CAR_ONLY=['youngExcess','holdAmount','towing','dashcamAudio','includedKm','excessKmRate'],JET_ONLY=['hin','engineHours','pickupLoc','retLoc','lateFee','extras','equipment'];let mode='Car';
+function renderPick(){const items=fleet.filter(v=>mode==='Jet ski'?v.type==='Jet ski':v.type!=='Jet ski');
+ $('#pick').innerHTML=items.length?items.map(v=>`<div class="tile${sel.includes(String(v.id))?' sel':''}" data-pick="${v.id}"><img src="/api/vehicles/${v.id}/image" onerror="this.style.display='none'"><div><b>${esc(v.name)}</b><br><span style="color:var(--mut);font-size:13px">${esc(v.type||'Car')}${v.rego?' - '+esc(v.rego):''}</span></div></div>`).join(''):'<p style="color:var(--mut)">Nothing here yet. Add it under Fleet in the menu above.</p>';
+ document.querySelectorAll('.tile').forEach(t=>t.onclick=()=>pick(t.dataset.pick))}
+function setMode(m){mode=m;document.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.m===m));renderPick();applySel()}
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>setMode(b.dataset.m));setMode('Car');
+var prefillFrom=null,pfT=null;
+$('#pfQ').oninput=()=>{clearTimeout(pfT);const q=$('#pfQ').value.trim();if(q.length<2){$('#pfRes').innerHTML='';return}
+ pfT=setTimeout(async()=>{try{const r=await api('/api/customers?q='+encodeURIComponent(q));
+  $('#pfRes').innerHTML=r.length?r.map(c=>`<div class="trow" data-pf="${c.bookingId}" data-nm="${esc(c.name)}"><span><b>${esc(c.name)}</b> ${esc(c.mobile||'')} ${esc(c.email||'')}</span><span>Use these details</span></div>`).join(''):'<p style="color:var(--mut);margin:4px 0">No past customers found.</p>';
+  document.querySelectorAll('[data-pf]').forEach(e=>e.onclick=()=>{prefillFrom=+e.dataset.pf;$('#pfTxt').textContent='Details will be pre-filled from '+e.dataset.nm+'. They can check and update them on the link.';$('#pfRes').innerHTML='';$('#pfQ').value=''})}catch(x){}},300)};
+function urlB64(b){const p='='.repeat((4-b.length%4)%4),s=(b+p).replace(/-/g,'+').replace(/_/g,'/'),r=atob(s);return Uint8Array.from([...r].map(c=>c.charCodeAt(0)))}
+async function drawPush(){const box=$('#pushBox');
+ const ios=/iPhone|iPad/.test(navigator.userAgent),standalone=navigator.standalone||matchMedia('(display-mode: standalone)').matches;
+ const note=t=>`<section><b>Notifications</b><p style="margin:6px 0 0;color:var(--mut)">${t}</p></section>`;
+ if(!('serviceWorker' in navigator)||!('PushManager' in window)){box.innerHTML=note(ios&&!standalone?'On iPhone, first add this app to your Home Screen (Safari &gt; Share &gt; Add to Home Screen), then open it from there and turn on notifications.':'This browser does not support notifications.');return}
+ const reg=await navigator.serviceWorker.ready,sub=await reg.pushManager.getSubscription(),denied=Notification.permission==='denied';
+ if(sub)api('/api/push/subscribe',{method:'POST',body:JSON.stringify(sub)}).catch(()=>{});
+ box.innerHTML=`<section><b>Notifications</b> <span style="color:var(--mut)">${sub?'on for this device':denied?'blocked in your phone settings':'off'}</span><p style="margin:10px 0 0">${sub?'<button class="ghost" id="pTest">Send test</button> <button class="ghost" id="pOff">Turn off</button>':denied?'':'<button id="pOn">Turn on notifications</button>'}</p><div class="err" id="pErr"></div></section>`;
+ const on=(i,f)=>{const e=$(i);if(e)e.onclick=f};
+ on('#pOn',async()=>{try{const p=await Notification.requestPermission();if(p!=='granted')throw new Error('Notifications were not allowed.');const k=(await api('/api/push/key')).key;const s=await reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:urlB64(k)});await api('/api/push/subscribe',{method:'POST',body:JSON.stringify(s)});drawPush()}catch(e){$('#pErr').textContent=e.message}});
+ on('#pOff',async()=>{try{const e=sub.endpoint;await sub.unsubscribe();await api('/api/push/unsubscribe',{method:'POST',body:JSON.stringify({endpoint:e})});drawPush()}catch(x){$('#pErr').textContent=x.message}});
+ on('#pTest',async()=>{try{const r=await api('/api/push/test',{method:'POST'});$('#pErr').style.color=r.sent?'#05603a':'#b42318';$('#pErr').textContent=r.sent?'Sent. Your phone should buzz in a few seconds.':(r.total===0?'The server had no record of this device. It has been registered now, so press Send test again.':'The notification service rejected it: '+(r.errors[0]||'unknown reason')+'. Tell your helper this message.')}catch(e){$('#pErr').textContent=e.message}})}
+addEventListener('hashchange',()=>{if(!$('#app').classList.contains('hide'))go(location.hash.slice(1))});
+var reqs=[],reqId=null;
+const waNum=m=>{let d=String(m).replace(/\D/g,'');if(d.startsWith('0'))d='61'+d.slice(1);return d};
+async function loadReq(){try{reqs=await api('/api/requests')}catch(e){reqs=[]}const n=reqs.filter(r=>r.status==='new').length;const b=$('#reqBadge');b.textContent=n;b.classList.toggle('hide',!n)}
+function fromRequest(r){const v=fleet.find(x=>x.id==r.vehicle_id);cancelEdit();setMode(v&&v.type==='Jet ski'?'Jet ski':'Car');setSel(v?[v.id]:[]);if(!v)$('#f_vehicle').value=r.vehicle_name;
+ $('#f_pickup').value=r.pickup;$('#f_ret').value=r.ret;totalTouched=false;autoTotal();$('#wam').value=r.mobile;reqId=r.id;bar('Creating a booking from the request by '+r.name+'. Add the bond and deposit, then create the link.');go('new')}
+function drawReq(){const tg=s=>s==='new'?'pending':s==='approved'?'signed':'cancelled',lb=s=>s==='new'?'New':s==='approved'?'Booking created':'Declined';
+ $('#reqBox').innerHTML=reqs.length?reqs.map(r=>`<div class="rq ${r.status}"><div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><b style="font-size:17px">${esc(r.name)}</b><span class="tag ${tg(r.status)}">${lb(r.status)}</span></div>
+ <div style="color:var(--mut);margin:4px 0">${esc(r.vehicle_name)} &middot; ${esc(String(r.pickup).replace('T',' '))} to ${esc(String(r.ret).replace('T',' '))}</div>
+ <div><a href="tel:${esc(r.mobile)}">${esc(r.mobile)}</a> &middot; <a href="mailto:${esc(r.email)}">${esc(r.email)}</a></div>${r.notes?`<p style="margin:6px 0 0">${esc(r.notes)}</p>`:''}
+ ${r.status==='new'?`<p style="margin:10px 0 0;display:flex;gap:8px;flex-wrap:wrap"><button data-mk="${r.id}">Create booking</button><button class="ghost" data-wa="${r.id}">WhatsApp</button><button class="ghost" data-dc="${r.id}">Decline</button></p>`:''}</div>`).join(''):'<p style="color:var(--mut)">No requests yet. They appear here when customers use your website.</p>';
+ const get=id=>reqs.find(x=>x.id==id);
+ document.querySelectorAll('[data-mk]').forEach(b=>b.onclick=()=>fromRequest(get(b.dataset.mk)));
+ document.querySelectorAll('[data-wa]').forEach(b=>b.onclick=()=>{const r=get(b.dataset.wa);window.open('https://wa.me/'+waNum(r.mobile)+'?text='+encodeURIComponent('Hi '+r.name.split(' ')[0]+', thanks for your request for the '+r.vehicle_name+' with RPM Rental Group.'),'_blank')});
+ document.querySelectorAll('[data-dc]').forEach(b=>b.onclick=async()=>{if(confirm('Decline this request? (The customer is not notified automatically.)')){await api('/api/requests/'+b.dataset.dc+'/decline',{method:'POST'});await loadReq();drawReq()}})}
+const P=['today','req','new','hist','cal','fleet'];
+var editId=null,chg=[];
+const lab=s=>({signed:'Signed',pending:'Awaiting signature',cancelled:'Cancelled'})[s]||s;
+function flags(b){const f=[],s=b.schedule,c=b.customer;if(!c||b.status==='cancelled')return f;
+ const pk=s.pickup?new Date(s.pickup):null,rt=s.ret?new Date(s.ret):null,dob=c.dob?new Date(c.dob):null;
+ const hasJet=s.hasJet!==undefined?s.hasJet:s.itemType==='Jet ski',hasCar=s.hasCar!==undefined?s.hasCar:s.itemType!=='Jet ski';
+ [c.licenceExpiry,c.marineExpiry].filter(Boolean).forEach(e=>{const ex=new Date(e);if(pk&&ex<pk)f.push(['red','Licence expired before pickup']);else if(rt&&ex<rt)f.push(['amber','Licence expires during the hire'])});
+ if(dob&&pk){const age=(pk-dob)/31557600000;if(age<18)f.push(['red','Under 18 at pickup - not eligible']);else if(age<25)f.push(['amber','Under 25 - young driver excess may apply'])}
+ if(hasJet&&!/pwc/i.test(c.marineState||c.licenceState||''))f.push(['amber','No PWC endorsement mentioned']);
+ if(hasCar&&/^P[12]/.test(c.pPlate||''))f.push(['amber','Probationary licence - check vehicle restrictions']);
+ return f}
+function bar(t){$('#editBar').classList.toggle('hide',!t);$('#editTxt').textContent=t||''}
+function cancelEdit(){editId=null;reqId=null;bar('');$('#gen').textContent='Create private link'}
+function fillForm(s){setMode(s.itemType==='Jet ski'?'Jet ski':'Car');setSel(s.items?s.items.map(i=>i.vehicleId).filter(Boolean):(s.vehicleId?[s.vehicleId]:[]));F.forEach(([k])=>{$('#f_'+k).value=s[k]==null?'':s[k]});totalTouched=true}
+function startEdit(b){$('#dlg').close();fillForm(b.schedule);editId=b.id;bar('Editing the booking for '+b.vehicle+'. The customer link stays the same.');$('#gen').textContent='Save changes';go('new')}
+function startDup(b){$('#dlg').close();fillForm(b.schedule);['pickup','ret','totalPrice'].forEach(k=>$('#f_'+k).value='');totalTouched=false;editId=null;bar('New booking copied from '+b.vehicle+'. Set the dates and customer details.');$('#gen').textContent='Create private link';go('new')}
+$('#editX').onclick=cancelEdit;
+function topHtml(b){const fl=b.customer?flags(b):[];
+ return `<div style="margin:10px 0;display:flex;gap:8px;flex-wrap:wrap">${b.status==='pending'?'<button class="ghost" id="a_edit">Edit booking</button><button class="ghost" id="a_ext">Extend link 7 days</button>':''}<button class="ghost" id="a_dup">Duplicate</button>${b.signed_at?'<button class="ghost" id="a_mail">Email copy to customer</button>':''}${b.status==='cancelled'?'<button id="a_re">Reinstate</button>':'<button class="red" id="a_cancel">Cancel booking</button>'}</div>`
+ +(b.status==='cancelled'?`<div class="flag red">Cancelled ${fmt(b.cancelled_at)}${b.cancel_note?' - '+esc(b.cancel_note):''}</div>`:'')
+ +(b.customer?'<h3>Checks</h3>'+(fl.length?fl.map(([c,t])=>`<div class="flag ${c}">${esc(t)}</div>`).join(''):'<div class="flag ok">No issues found</div>'):'')}
+function drawChg(b){const tot=chg.reduce((a,c)=>a+(+c.amount||0),0);
+ $('#chgBox').innerHTML=chg.length?chg.map((c,i)=>`<div class="trow" style="cursor:default"><span>${esc(c.date||'')} ${esc(c.type)} $${esc(c.amount)} ${esc(c.note||'')}</span><span><label style="display:inline-flex;gap:4px;align-items:center;color:var(--ink)"><input type="checkbox" style="width:auto;margin:0" data-rec="${i}" ${c.recovered?'checked':''}> Recovered</label> <button class="ghost" data-del="${i}">Remove</button></span></div>`).join('')+`<p style="margin:6px 0">Total $${tot.toFixed(2)}</p>`:'<p style="color:var(--mut);margin:0 0 8px">None recorded.</p>';
+ document.querySelectorAll('[data-rec]').forEach(x=>x.onchange=()=>{chg[x.dataset.rec].recovered=x.checked;saveChg(b)});
+ document.querySelectorAll('[data-del]').forEach(x=>x.onclick=()=>{if(confirm('Remove this entry?')){chg.splice(+x.dataset.del,1);saveChg(b);drawChg(b)}})}
+async function saveChg(b){await api('/api/bookings/'+b.id+'/charges',{method:'PUT',body:JSON.stringify(chg)});load()}
+
+function extraHtml(b){const t=b.tracker||{};
+ const ck=(k,l)=>`<label style="display:inline-flex;gap:6px;align-items:center;margin:0 16px 8px 0;color:var(--ink);font-size:14px"><input type="checkbox" style="width:auto;margin:0" id="t_${k}" ${t[k]?'checked':''}> ${l}</label>`;
+ const cb=st=>{const c=(b.condition||[]).find(x=>x.stage===st)||{},ph=JSON.parse(c.photos||'[]');
+  return `<div style="border:1px solid var(--line);border-radius:8px;padding:12px;margin-bottom:12px"><b>${st==='return'?'Return':'Handover'}</b>${c.created?' <span style="color:var(--mut);font-size:13px">saved '+fmt(c.created)+'</span>':''}
+  <div class="grid" style="margin-top:8px"><label>Odometer km / engine hours<input id="c_${st}_reading" value="${esc(c.reading||'')}"></label><label>Fuel level<input id="c_${st}_fuel" value="${esc(c.fuel||'')}"></label><label>Damage / notes<input id="c_${st}_notes" value="${esc(c.notes||'')}"></label><label>Add photos (camera or gallery)<input id="c_${st}_ph" type="file" accept="image/*" multiple></label></div>
+  <div style="display:flex;gap:6px;flex-wrap:wrap;margin:8px 0">${ph.map(n=>`<a href="/api/file/${n}" target="_blank"><img src="/api/file/${n}" style="width:90px;height:70px;object-fit:cover"></a>`).join('')}</div>
+  <button data-cs="${st}">Save ${st} report</button></div>`};
+ return `<h3>Payments and bond</h3><div>${ck('rentalPaid','Rental paid')}${ck('depositPaid','Deposit paid')}${ck('bondPaid','Bond received')}${ck('bondRefunded','Bond refunded')}</div>
+ <div class="grid"><label>Bond refund date<input type="date" id="t_refundDate" value="${esc(t.refundDate||'')}"></label><label>Notes<input id="t_notes" value="${esc(t.notes||'')}"></label></div>
+ <p><button id="t_save">Save payments</button><span id="t_ok" style="color:#05603a"></span></p>
+ <h3>Fines and tolls</h3><div id="chgBox"></div><div class="grid"><label>Date<input type="date" id="g_date"></label><label>Type<select id="g_type"><option>Fine</option><option>Toll</option><option>Other</option></select></label><label>Amount ($)<input type="number" id="g_amt" min="0" step="0.01"></label><label>Reference / note<input id="g_note"></label></div><p><button id="g_add">Add</button></p>
+ <h3>Condition report</h3>${cb('handover')}${cb('return')}`}
+function wireExtra(b){
+ const on=(id,fn)=>{const e=$(id);if(e)e.onclick=fn};
+ on('#a_edit',()=>startEdit(b));on('#a_ext',async()=>{await api('/api/bookings/'+b.id+'/extend',{method:'POST',body:JSON.stringify({days:7})});await load();openBooking(b.id)});on('#a_dup',()=>startDup(b));
+ on('#a_cancel',async()=>{const n=prompt('Reason for cancelling (optional):');if(n===null)return;await api('/api/bookings/'+b.id+'/cancel',{method:'POST',body:JSON.stringify({note:n})});await load();openBooking(b.id)});
+ on('#a_re',async()=>{await api('/api/bookings/'+b.id+'/reinstate',{method:'POST'});await load();openBooking(b.id)});
+ on('#a_mail',async()=>{try{await api('/api/bookings/'+b.id+'/email-copy',{method:'POST'});alert('Copy emailed to '+b.customer.email)}catch(e){alert(e.message)}});
+ chg=(b.charges||[]).slice();drawChg(b);
+ on('#g_add',()=>{const amt=$('#g_amt').value;if(!amt)return;chg.push({date:$('#g_date').value,type:$('#g_type').value,amount:amt,note:$('#g_note').value,recovered:false});['g_date','g_amt','g_note'].forEach(i=>$('#'+i).value='');saveChg(b);drawChg(b)});
+ $('#t_save').onclick=async()=>{const body={};['rentalPaid','depositPaid','bondPaid','bondRefunded'].forEach(k=>body[k]=$('#t_'+k).checked);body.refundDate=$('#t_refundDate').value;body.notes=$('#t_notes').value;
+  try{await api('/api/bookings/'+b.id+'/tracker',{method:'PUT',body:JSON.stringify(body)});$('#t_ok').textContent=' Saved';load()}catch(e){$('#t_ok').textContent=' '+e.message}};
+ document.querySelectorAll('[data-cs]').forEach(btn=>btn.onclick=async()=>{const st=btn.dataset.cs,fd=new FormData();fd.append('stage',st);['reading','fuel','notes'].forEach(k=>fd.append(k,$('#c_'+st+'_'+k).value));
+  btn.disabled=true;btn.textContent='Saving...';
+  for(const f of $('#c_'+st+'_ph').files)fd.append('photos',await shrink(f),'photo.jpg');
+  const r=await fetch('/api/bookings/'+b.id+'/condition',{method:'POST',body:fd});
+  if(!r.ok){btn.textContent='Error, try again';btn.disabled=false;return}
+  await load();openBooking(b.id)})}
+const stat=(n,l,hot)=>`<div class="stat${hot&&n?' hot':''}"><b>${n}</b><span>${l}</span></div>`;
+function stats(pk,rt,late,bonds,un){return '<div class="stats">'+stat(pk.length,'Pickups today')+stat(rt.length,'Returns today')+stat(late.length,'Overdue',1)+stat(bonds.length,'Bonds to refund',1)+stat(un.length,'Awaiting signature')+'</div>'}
+function drawToday(){const L=list.filter(b=>b.status!=='cancelled'),now=new Date(),td=now.toLocaleDateString('en-CA'),d=v=>new Date(v).toLocaleDateString('en-CA'),tm=v=>String(v).split('T')[1]||'';
+ const biz=(v,n)=>{const x=new Date(v);let i=0;while(i<n){x.setDate(x.getDate()+1);if(x.getDay()%6)i++}return x};
+ const row=(b,note,cls)=>`<div class="trow" data-id="${b.id}"><span><b>${esc(b.vehicle)}</b> - ${esc(b.customer?.name||'Awaiting customer')}</span><span class="${cls||''}">${note||''}</span></div>`;
+ const card=(t,rows,empty)=>`<section><h2>${t} <span style="font-weight:400;color:var(--mut)">(${rows.length})</span></h2>${rows.length?rows.join(''):'<p style="color:var(--mut);margin:0">'+empty+'</p>'}</section>`;
+ const pk=L.filter(b=>b.schedule.pickup&&d(b.schedule.pickup)===td).map(b=>row(b,tm(b.schedule.pickup)));
+ const rt=L.filter(b=>b.schedule.ret&&d(b.schedule.ret)===td&&!b.returned).map(b=>row(b,tm(b.schedule.ret)));
+ const late=L.filter(b=>b.handed&&!b.returned&&b.schedule.ret&&new Date(b.schedule.ret)<now).map(b=>row(b,'Was due '+fmt(b.schedule.ret),'late'));
+ const bonds=L.filter(b=>b.tracker&&b.tracker.bondPaid&&!b.tracker.bondRefunded&&b.schedule.ret&&new Date(b.schedule.ret)<now).map(b=>{const due=biz(b.schedule.ret,5);return row(b,'Refund due by '+due.toLocaleDateString('en-AU',{dateStyle:'medium'}),due<now?'late':'')});
+ const nr=reqs.filter(r=>r.status==='new').map(r=>`<div class="trq"><span><b>${esc(r.name)}</b> - ${esc(r.vehicle_name)}</span><span>${esc(String(r.pickup).replace('T',' '))}</span></div>`);
+ const att=L.filter(b=>b.status==='signed'&&!b.returned&&flags(b).length).map(b=>row(b,flags(b)[0][1],flags(b)[0][0]==='red'?'late':''));
+ const fines=L.filter(b=>(b.charges||[]).some(c=>!c.recovered)).map(b=>row(b,'$'+b.charges.filter(c=>!c.recovered).reduce((x,c)=>x+(+c.amount||0),0).toFixed(2)+' to recover'));
+ const un=L.filter(b=>b.status==='pending').map(b=>b.link_expires&&new Date(b.link_expires)<now?row(b,'Link EXPIRED '+fmt(b.link_expires),'late'):row(b,b.link_expires?'Link expires '+fmt(b.link_expires):'Link created '+fmt(b.created)));
+ $('#todayBox').innerHTML='<h2 style="margin:0 0 14px">Today - '+now.toLocaleDateString('en-AU',{dateStyle:'full'})+'</h2>'+stats(pk,rt,late,bonds,un)+card('New booking requests',nr,'No new requests.')+card('Pickups today',pk,'No pickups today.')+card('Returns due today',rt,'No returns due today.')+card('Overdue returns',late,'Nothing overdue.')+card('Bonds to refund',bonds,'No bonds waiting.')+card('Needs attention',att,'No licence or age flags.')+card('Fines to recover',fines,'None.')+card('Awaiting signature',un,'Everything is signed.');
+ document.querySelectorAll('.trow').forEach(el=>el.onclick=()=>openBooking(+el.dataset.id));document.querySelectorAll('.trq').forEach(e=>e.onclick=()=>go('req'));drawPush()}
+
+var totalTouched=false;$('#f_totalPrice').addEventListener('input',()=>totalTouched=true);
+function autoTotal(){if(totalTouched)return;const p=$('#f_pickup').value,r=$('#f_ret').value,d=parseFloat($('#f_dailyRate').value);if(!p||!r||!d)return;const days=Math.max(1,Math.ceil((new Date(r)-new Date(p))/864e5));$('#f_totalPrice').value=(days*d).toFixed(2);$('#daysNote').textContent=days+' day'+(days>1?'s':'')+' x $'+d+' (you can change the total)'}
+['f_pickup','f_ret','f_dailyRate'].forEach(i=>$('#'+i).addEventListener('input',autoTotal));
+const wmsg=()=>'Hi, please complete your RPM Rental Group rental agreement here (takes about 3 minutes): '+$('#linktxt').textContent;
+const wphone=()=>{let d=$('#wam').value.replace(/\D/g,'');if(d.startsWith('0'))d='61'+d.slice(1);return d};
+$('#wa').onclick=()=>window.open('https://wa.me/'+wphone()+'?text='+encodeURIComponent(wmsg()),'_blank');
+$('#smsb').onclick=()=>{location.href='sms:'+$('#wam').value.replace(/\s/g,'')+'?&body='+encodeURIComponent(wmsg())};
+var calM=new Date();calM.setDate(1);
+function drawCal(){const sel=$('#calCar'),keep=sel.value;sel.innerHTML=fleet.map(v=>`<option value="${v.id}">${esc(v.name)} (${esc(v.type||'Car')})</option>`).join('');if(keep)sel.value=keep;
+ const id=sel.value,y=calM.getFullYear(),m=calM.getMonth();$('#calTitle').textContent=calM.toLocaleDateString('en-AU',{month:'long',year:'numeric'});
+ const start=(new Date(y,m,1).getDay()+6)%7,days=new Date(y,m+1,0).getDate();
+ const bk=id?list.filter(b=>b.status!=='cancelled'&&vids(b).includes(String(id))&&b.schedule.pickup&&b.schedule.ret):[];
+ let h=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map(d=>`<div class="ch">${d}</div>`).join('');
+ for(let i=0;i<start;i++)h+='<div class="cd off"></div>';
+ for(let d=1;d<=days;d++){const a=new Date(y,m,d),z=new Date(y,m,d,23,59,59);const hits=bk.filter(b=>new Date(b.schedule.pickup)<=z&&new Date(b.schedule.ret)>=a);
+  h+=`<div class="cd${hits.length?' bk':''}"><b>${d}</b>${hits.map(b=>`<div class="ev ${b.status}">${esc(b.customer?.name||'Awaiting signature')}</div>`).join('')}</div>`}
+ $('#calGrid').innerHTML=h}
+$('#calCar').onchange=drawCal;$('#calPrev').onclick=()=>{calM.setMonth(calM.getMonth()-1);drawCal()};$('#calNext').onclick=()=>{calM.setMonth(calM.getMonth()+1);drawCal()};
+function go(n){if(!P.includes(n))n='today';P.forEach(p=>$('#p_'+p).classList.toggle('hide',p!==n));
+ document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('on',b.dataset.p===n));location.hash=n;if($('#app').classList.contains('hide'))return;if(n==='hist')load();if(n==='fleet')loadFleet();if(n==='cal')Promise.all([load(),loadFleet()]).then(drawCal);if(n==='today')Promise.all([load(),loadReq()]).then(drawToday);if(n==='req')loadReq().then(drawReq)}
+document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>go(b.dataset.p));go(location.hash.slice(1));
+$('#addCar').onclick=async()=>{$('#verr').textContent='';const fd=new FormData();[['type','v_type'],['name','v_name'],['rego','v_rego'],['dailyRate','v_rate'],['bond','v_bond'],['excess','v_excess']].forEach(([k,i])=>fd.append(k,$('#'+i).value));const f=$('#v_img').files[0];if(f)fd.append('image',await shrink(f),'car.jpg');
+ const r=await fetch('/api/vehicles',{method:'POST',body:fd});const j=await r.json().catch(()=>({}));if(!r.ok){$('#verr').textContent=j.error||'Error';return}
+ ['v_name','v_rego','v_rate','v_bond','v_excess','v_img'].forEach(i=>$('#'+i).value='');loadFleet()};
+const fmt=d=>d?new Date(d).toLocaleString('en-AU',{dateStyle:'medium',timeStyle:'short'}):'-';
+async function load(){list=await api('/api/bookings');render()}
+function render(){const q=$('#q').value.toLowerCase(),st=$('#st').value,by=$('#by').value,from=$('#from').value,to=$('#to').value;
+ const day=d=>d?new Date(d).toLocaleDateString('en-CA'):'';
+ const shown=list.filter(b=>{if(st&&b.status!==st)return false;const d=day(by==='pickup'?b.schedule.pickup:by==='created'?b.created:b.signed_at);if(from&&(!d||d<from))return false;if(to&&(!d||d>to))return false;return !q||(b.vehicle+' '+(b.customer?.name||'')+' '+(b.customer?.mobile||'')).toLowerCase().includes(q)});
+ $('#count').textContent='('+shown.length+' of '+list.length+')';$('#empty').classList.toggle('hide',list.length>0);
+ $('#rows').innerHTML=shown.map(b=>`<tr class="row" data-id="${b.id}"><td>${esc(b.vehicle)}</td><td>${esc(b.customer?.name||'Waiting for customer')}</td><td>${fmt(b.schedule.pickup)}</td><td><span class="tag ${b.status}">${lab(b.status)}</span>${b.status!=='cancelled'&&flags(b).length?' <span title="Needs attention" style="color:#b45309">&#9888;</span>':''}</td><td>${fmt(b.signed_at)}</td></tr>`).join('');
+ document.querySelectorAll('tr.row').forEach(tr=>tr.onclick=()=>openBooking(+tr.dataset.id))}
+async function openBooking(id){const b=await api('/api/bookings/'+id);cur=b;const s=b.schedule,c=b.customer;
+ const rows=o=>'<dl>'+o.filter(x=>x[1]!=null&&x[1]!=='').map(([k,v])=>`<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')+'</dl>';
+ const link=location.origin+'/s/'+b.token;
+ $('#detail').innerHTML=`<h2>${esc(b.vehicle)} <span class="tag ${b.status}">${lab(b.status)}</span></h2>
+ ${(s.items||[{name:b.vehicle,image:s.carImage}]).map((it,i)=>it.image?`<span style="display:inline-block;margin:0 10px 10px 0;text-align:center"><img src="/car/${b.token}/${i}" style="max-width:220px;border-radius:8px;display:block">${esc(it.name)}</span>`:'').join('')}<h3>Rental schedule</h3>${rows(F.filter(([k])=>k!=='vehicle'&&s[k]).map(([k,l])=>[l.replace(/ \(.*/,''),s[k]]))}`+
+ (c?`<h3>Customer</h3>${rows([['Name',c.name],['Date of birth',c.dob],['Address',c.address],['Mobile',c.mobile],['Email',c.email],['Emergency contact',c.emergency],['Licence no.',c.licenceNo],['Licence state / class',c.licenceState],['Licence expiry',c.licenceExpiry],['P-plate status',c.pPlate],['Marine licence no.',c.marineNo],['Marine endorsement',c.marineState],['Marine licence expiry',c.marineExpiry]])}
+ <h3>Signed agreement record</h3>${rows([['Signed at',fmt(b.signed_at)],['IP address',b.ip],['Device',b.ua],['Agreement version (SHA-256)',b.agreement_hash]])}
+ <p><b>Signature</b><br><img src="${b.signature}" style="max-width:320px;background:#fff"></p>${s.hasCar!==false?`<p><b>Driver licence photos</b></p><div class="ph3"><div>Front<br><img src="/api/bookings/${b.id}/photo/front"></div><div>Back<br><img src="/api/bookings/${b.id}/photo/back"></div><div>VicRoads app<br>${b.id_app?`<img src="/api/bookings/${b.id}/photo/app">`:'<span style="color:var(--mut)">Not provided</span>'}</div></div>`:''}${c.marineFiles?`<p><b>Marine licence photos</b></p><div class="ph3"><div>Front<br><img src="/api/file/${c.marineFiles.front}"></div><div>Back<br><img src="/api/file/${c.marineFiles.back}"></div></div>`:''}`
+ :`<p>Not signed yet.${b.link_expires?' Link expires '+fmt(b.link_expires)+'.':''} Customer link:</p><div class="linkbox">${esc(link)}</div>`);
+ $('#detail').insertAdjacentHTML('afterbegin',topHtml(b));$('#detail').insertAdjacentHTML('beforeend',extraHtml(b));wireExtra(b);$('#pdf').classList.toggle('hide',!b.signed_at);if(!$('#dlg').open)$('#dlg').showModal()}
+$('#close').onclick=()=>$('#dlg').close();$('#pdf').onclick=()=>window.open('/record/'+cur.id,'_blank');
+['q','st','by','from','to'].forEach(i=>$('#'+i).oninput=render);$('#clrf').onclick=()=>{['q','st','from','to'].forEach(i=>$('#'+i).value='');render()};
+api('/api/me').then(r=>show(r.admin));
+if('serviceWorker' in navigator)navigator.serviceWorker.register('/sw.js').catch(()=>{});
+</script></body></html>

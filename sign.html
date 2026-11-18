@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><meta name="theme-color" content="#09090b"><title>RPM Rental Group - Rental agreement</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#f3f4f6;--mut:#9aa1ad;--line:#2a2d35;--bg:#09090b;--card:#141519;--card2:#1b1d23;--acc:#e11d2e;--accd:#b3121f}
+*{box-sizing:border-box}html{color-scheme:dark}
+body{margin:0;font:16px/1.55 'Barlow',system-ui,sans-serif;color:var(--ink);background:radial-gradient(1100px 480px at 50% -8%,#2a1015 0,#0d0d10 55%,#09090b 100%) fixed;-webkit-font-smoothing:antialiased}
+.top{text-align:center;padding:14px 10px 12px;padding-top:calc(14px + env(safe-area-inset-top));position:relative}
+.top::after{content:'';position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,transparent,var(--acc),transparent)}
+.top img{height:104px;max-width:100%;object-fit:contain}
+main{max-width:640px;margin:0 auto;padding:16px 14px 120px}
+.prog{margin:2px 0 16px}.prog small{display:flex;justify-content:space-between;color:var(--mut);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+.bar{display:flex;gap:6px;margin-top:8px}.bar i{flex:1;height:5px;border-radius:9px;background:#2a2d35;transition:background .3s}.bar i.on{background:var(--acc);box-shadow:0 0 12px rgba(225,29,46,.55)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:14px;box-shadow:0 18px 40px -26px #000}
+h1{font:700 30px/1 'Barlow Condensed',sans-serif;letter-spacing:.03em;text-transform:uppercase;margin:0}
+h2{font:700 23px/1.1 'Barlow Condensed',sans-serif;letter-spacing:.05em;text-transform:uppercase;margin:0 0 14px}
+h3{font:700 16px 'Barlow Condensed',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin:20px 0 8px}
+.vh{position:relative;border-radius:18px;overflow:hidden;margin-bottom:14px;background:var(--card);border:1px solid var(--line)}
+.vh img{width:100%;height:250px;object-fit:cover;display:block}
+.vh .cap{position:absolute;left:0;right:0;bottom:0;padding:54px 18px 16px;background:linear-gradient(transparent,rgba(0,0,0,.9))}
+.vh.noimg .cap{position:static;background:none;padding:18px}.vh p{margin:5px 0 0;color:#c7ccd4;font-size:14px}
+.total{display:flex;justify-content:space-between;align-items:baseline;padding:14px 16px;border-radius:14px;background:linear-gradient(135deg,#2a1015,#15171c);border:1px solid #4a1a21;margin-bottom:12px}
+.total span{color:#d9a3aa;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}.total b{font:700 34px 'Barlow Condensed',sans-serif;letter-spacing:.02em}
+dl{display:grid;grid-template-columns:140px 1fr;margin:0}dt,dd{padding:9px 0;border-bottom:1px solid var(--line);margin:0}dt{color:var(--mut)}dd{font-weight:500}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+label{display:block;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}
+input,select{width:100%;margin-top:6px;padding:14px;border:1px solid var(--line);border-radius:12px;font:inherit;font-size:16px;letter-spacing:0;text-transform:none;font-weight:400;color:var(--ink);background:var(--card2)}
+input:focus,select:focus{outline:0;border-color:var(--acc);box-shadow:0 0 0 3px rgba(225,29,46,.22)}
+input[type=file]{padding:12px;font-size:14px}
+.ph{margin-top:14px}.pv{display:none;max-height:140px;margin-top:10px;border-radius:10px;border:1px solid var(--line)}
+#terms{height:300px;overflow:auto;border:1px solid var(--line);border-radius:12px;padding:14px;white-space:pre-wrap;font-size:13.5px;color:#d3d7de;background:#0f1013}
+canvas{width:100%;height:180px;border:2px dashed #5a606c;border-radius:14px;touch-action:none;background:#fff}
+button{padding:15px 22px;border:0;border-radius:14px;background:linear-gradient(180deg,#ee2234,#c4101f);color:#fff;font:700 19px 'Barlow Condensed',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;box-shadow:0 12px 24px -12px rgba(225,29,46,.9);transition:transform .08s,filter .15s}
+button:hover{filter:brightness(1.08)}button:active{transform:scale(.98)}button:disabled{background:#3a3e47;box-shadow:none;cursor:not-allowed}
+button.ghost{background:var(--card2);color:var(--ink);border:1px solid var(--line);box-shadow:none}button.sm{padding:9px 14px;font:600 14px 'Barlow',sans-serif;letter-spacing:0;text-transform:none}
+.chk{display:flex;gap:12px;align-items:flex-start;color:var(--ink);font-size:15px;letter-spacing:0;text-transform:none;font-weight:400;margin-top:14px}.chk input{width:20px;height:20px;margin-top:3px;accent-color:var(--acc)}
+.err{color:#ff7a86;margin:6px 0;min-height:22px;font-weight:600}.note{color:var(--mut);font-size:14px;margin:4px 0 0}.hide{display:none!important}
+.nav{position:fixed;left:0;right:0;bottom:0;z-index:20;background:rgba(10,10,12,.92);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom))}
+.nav>div{max-width:612px;margin:0 auto;display:flex;gap:10px}.nav button{flex:1}.nav .ghost{flex:0 0 96px;font:700 17px 'Barlow Condensed',sans-serif;letter-spacing:.1em;text-transform:uppercase}
+.next li{margin:8px 0}.okc{width:64px;height:64px;border-radius:50%;background:linear-gradient(180deg,#ee2234,#b3121f);display:flex;align-items:center;justify-content:center;font-size:32px;margin:6px 0 14px;box-shadow:0 0 0 8px rgba(225,29,46,.18)}
+</style></head><body>
+<div class="top"><img src="/logo.jpg" alt="RPM Rental Group"></div>
+<main>
+<div id="msg"></div>
+<div id="prog" class="prog hide"><small><span id="stp">Step 1 of 4</span><span id="stl">Your rental</span></small><div class="bar"><i></i><i></i><i></i><i></i></div></div>
+<form id="f" class="hide" novalidate>
+<div class="step" data-s="1">
+ <div id="welcome" class="card hide" style="background:#fff7f8;border-color:#f3c3ca"><b>Welcome back</b><p class="note" style="font-size:15px;margin-top:4px">We have filled in your details from last time. Please check them and update anything that has changed.</p></div>
+ <div id="vehs"></div>
+ <div class="card"><h2>Rental details</h2><p class="note" id="ttl"></p><div id="tot"></div><dl id="sum"></dl></div>
+ <div class="card"><b>Before you start</b><p class="note" id="need" style="font-size:15px;margin-top:6px">You will need about 3 minutes.</p></div>
+</div>
+<div class="step hide" data-s="2"><div class="card"><h2>Your details</h2><div class="grid">
+<label><span class="t">Full legal name</span><input name="name" autocomplete="name"></label>
+<label><span class="t">Date of birth</span><input name="dob" type="date" autocomplete="bday"></label>
+<label><span class="t">Residential address</span><input name="address" autocomplete="street-address"></label>
+<label><span class="t">Mobile</span><input name="mobile" type="tel" autocomplete="tel"></label>
+<label><span class="t">Email</span><input name="email" type="email" autocomplete="email"></label>
+<label><span class="t">Emergency contact (name and number)</span><input name="emergency"></label></div>
+<div id="drv"><h3>Driver licence</h3><div class="grid">
+<label><span class="t">Driver licence number</span><input name="licenceNo"></label>
+<label><span class="t">Licence state / class</span><input name="licenceState" placeholder="e.g. VIC / C"></label>
+<label><span class="t">Licence expiry</span><input name="licenceExpiry" type="date"></label>
+<label><span class="t">Licence type</span><select name="pPlate"><option value="">Select</option><option>Full</option><option>P2 Green</option><option>P1 Red</option></select></label></div></div>
+<div id="mar"><h3>Marine licence (jet ski)</h3><div class="grid">
+<label><span class="t">Marine licence number</span><input name="marineNo"></label>
+<label><span class="t">Endorsement</span><input name="marineState" placeholder="e.g. VIC / PWC"></label>
+<label><span class="t">Marine licence expiry</span><input name="marineExpiry" type="date"></label></div></div></div></div>
+<div class="step hide" data-s="3"><div class="card"><h2>Licence photos</h2><p class="note">Take a photo or choose one from your gallery. Make sure all the text is readable. Photos are stored securely and only seen by RPM Rental Group.</p>
+<div id="drvP"><h3>Driver licence</h3><p class="note hide" id="drvOn">We already have your driver licence photos. Add new ones only if your licence has changed.</p>
+<label class="ph"><span class="t">Front</span><input name="idFront" type="file" accept="image/*"><img class="pv" alt=""></label>
+<label class="ph"><span class="t">Back</span><input name="idBack" type="file" accept="image/*"><img class="pv" alt=""></label>
+<label class="ph"><span class="t">VicRoads app digital licence (screenshot, optional)</span><input name="idApp" type="file" accept="image/*"><img class="pv" alt=""></label></div>
+<div id="marP"><h3>Marine licence</h3><p class="note hide" id="marOn">We already have your marine licence photos. Add new ones only if it has changed.</p>
+<label class="ph"><span class="t">Front</span><input name="marineFront" type="file" accept="image/*"><img class="pv" alt=""></label>
+<label class="ph"><span class="t">Back</span><input name="marineBack" type="file" accept="image/*"><img class="pv" alt=""></label></div></div></div>
+<div class="step hide" data-s="4">
+ <div class="card"><h2>Read the agreement</h2><p class="note" style="margin-bottom:8px">Scroll to the end of the terms to continue.</p><div id="terms" tabindex="0"></div>
+ <label class="chk"><input type="checkbox" id="agree" disabled><span>I have read and understood this agreement and agree to be bound by it.</span></label></div>
+ <div class="card"><h2>Sign</h2><canvas id="pad"></canvas><p style="margin:8px 0 0"><button type="button" class="ghost sm" id="clr">Clear signature</button></p></div>
+</div>
+<div class="err" id="err" role="alert"></div>
+</form></main>
+<div class="nav hide" id="nav"><div><button type="button" class="ghost" id="back">Back</button><button type="button" id="next">Start</button></div></div>
+<script>
+const $=s=>document.querySelector(s),token=location.pathname.split('/').pop(),KEY='rpm_'+token;
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const L={rego:'Registration',pickup:'Pickup',ret:'Return',dailyRate:'Daily rate $',totalPrice:'Total price $',deposit:'Booking deposit $',bond:'Security bond $',includedKm:'Included km',excessKmRate:'Excess km rate',excess:'Insurance excess $',youngExcess:'Young driver excess $',holdAmount:'Second driving event hold $',pickupLoc:'Pickup location',retLoc:'Return location',hin:'Hull ID',engineHours:'Engine hours at handover',lateFee:'Late return fee $',extras:'Additional charges',equipment:'Equipment supplied',fuel:'Fuel on handover',towing:'Towing authorised',dashcamAudio:'Dashcam audio',notes:'Notes'};
+const dt=v=>new Date(v).toLocaleString('en-AU',{dateStyle:'medium',timeStyle:'short'});
+const TITLES=['Your rental','Your details','Photos','Agreement and signature'];
+let step=1,padReady=false,SCH={},ONFILE={},HASC=true,HASJ=false;
+function msg(h){$('#msg').innerHTML='<div class="card">'+h+'</div>';['f','prog','nav'].forEach(i=>$('#'+i).classList.add('hide'))}
+function group(sel,on){$(sel).classList.toggle('hide',!on);document.querySelectorAll(sel+' input,'+sel+' select').forEach(e=>e.disabled=!on)}
+fetch('/api/c/'+token).then(async r=>{const j=await r.json().catch(()=>({}));
+ if(!r.ok)return msg('<h2>Link not valid</h2><p>'+esc(j.error||'Something went wrong.')+' Please contact RPM Rental Group for a new link.</p>');
+ if(j.signed)return msg('<h2>Already signed</h2><p>This agreement has already been signed. No further action is needed.</p>');
+ SCH=j.schedule;ONFILE=j.onFile||{};const items=SCH.items||[];
+ HASC=items.some(i=>i.type!=='Jet ski');HASJ=items.some(i=>i.type==='Jet ski');
+ $('#vehs').innerHTML=items.map(i=>`<div class="vh${i.hasImage?'':' noimg'}">${i.hasImage?`<img src="/car/${token}/${i.n}" alt="">`:''}<div class="cap"><h1>${esc(i.name)}</h1><p>${esc(i.type)}${i.rego?' - '+esc(i.rego):''}${i.excess?' - Insurance excess $'+esc(i.excess):''}</p></div></div>`).join('');
+ $('#tot').innerHTML=SCH.totalPrice?'<div class="total"><span>Total rental price</span><b>$'+esc(SCH.totalPrice)+'</b></div>':'';
+ $('#sum').innerHTML=Object.keys(L).filter(k=>SCH[k]&&k!=='totalPrice'&&!(k==='rego'&&items.length>1)).map(k=>{let v=SCH[k];if(k==='pickup'||k==='ret')v=dt(v);return `<dt>${L[k]}</dt><dd>${esc(v)}</dd>`}).join('');
+ $('#ttl').textContent=HASC&&HASJ?'Vehicle and jet ski rental agreements':HASJ?'Jet ski rental agreement':'Motor vehicle rental agreement';
+ $('#need').textContent='You will need '+(HASC&&HASJ?'your driver licence and marine licence (front and back of each)':HASJ?'your marine licence (front and back)':'your driver licence (front and back)')+' and about 3 minutes.';
+ group('#drv',HASC);group('#mar',HASJ);group('#drvP',HASC);group('#marP',HASJ);
+ if(j.prefill){for(const k in j.prefill){const e=document.querySelector('[name='+k+']');if(e&&e.type!=='file')e.value=j.prefill[k]}if(j.prefill.address||j.prefill.licenceNo||j.prefill.marineNo)$('#welcome').classList.remove('hide')}
+ if(ONFILE.driver)$('#drvOn').classList.remove('hide');if(ONFILE.marine)$('#marOn').classList.remove('hide');
+ $('#terms').textContent=j.agreement;
+ $('#f').classList.remove('hide');$('#prog').classList.remove('hide');$('#nav').classList.remove('hide');
+ go(restore())});
+function save(){try{const d={step};document.querySelectorAll('#f [name]').forEach(e=>{if(e.type!=='file')d[e.name]=e.value});sessionStorage.setItem(KEY,JSON.stringify(d))}catch(e){}}
+function restore(){try{const d=JSON.parse(sessionStorage.getItem(KEY)||'{}');document.querySelectorAll('#f [name]').forEach(e=>{if(e.type!=='file'&&d[e.name]!=null&&d[e.name]!=='')e.value=d[e.name]});return Math.min(d.step||1,3)}catch(e){return 1}}
+document.querySelectorAll('#f input,#f select').forEach(e=>e.addEventListener('input',save));
+document.querySelectorAll('input[type=file]').forEach(e=>e.addEventListener('change',()=>{const im=e.nextElementSibling,fl=e.files[0];if(fl){im.src=URL.createObjectURL(fl);im.style.display='block'}else im.style.display='none'}));
+function go(n){step=n;document.querySelectorAll('.step').forEach(e=>e.classList.toggle('hide',+e.dataset.s!==n));
+ $('#stp').textContent='Step '+n+' of 4';$('#stl').textContent=TITLES[n-1];document.querySelectorAll('.bar i').forEach((e,k)=>e.classList.toggle('on',k<n));
+ $('#back').style.visibility=n>1?'visible':'hidden';$('#next').textContent=n===4?'Sign and submit':(n===1?'Start':'Continue');$('#err').textContent='';
+ if(n===4){if(!padReady){fit();padReady=true}chk()}scrollTo(0,0);save()}
+function chk(){const t=$('#terms');if(t.scrollTop+t.clientHeight>=t.scrollHeight-8)$('#agree').disabled=false}
+$('#terms').onscroll=chk;
+function check(n){const f=$('#f');
+ if(n===2){for(const e of document.querySelectorAll('.step[data-s="2"] [name]'))if(!e.disabled&&!e.value){e.focus();return 'Please fill in every field.'}
+  if(!/^\S+@\S+\.\S+$/.test(f.elements.email.value))return 'Please check your email address.'}
+ if(n===3){if(HASC&&!ONFILE.driver&&!(f.elements.idFront.files[0]&&f.elements.idBack.files[0]))return 'Please add the front and back of your driver licence.';if(HASJ&&!ONFILE.marine&&!(f.elements.marineFront.files[0]&&f.elements.marineBack.files[0]))return 'Please add the front and back of your marine licence.'}
+ if(n===4){if(!$('#agree').checked)return 'Scroll to the end of the agreement and tick the box to continue.';if(!inked)return 'Please sign in the signature box.'}
+ return ''}
+$('#back').onclick=()=>go(step-1);
+$('#next').onclick=()=>{const e=check(step);if(e){$('#err').textContent=e;return}if(step<4)go(step+1);else submit()};
+// signature pad
+const c=$('#pad'),x=c.getContext('2d');let draw=false,inked=false;
+function fit(){const r=c.getBoundingClientRect(),d=devicePixelRatio||1;c.width=r.width*d;c.height=r.height*d;x.scale(d,d);x.lineWidth=2.4;x.lineCap='round';x.strokeStyle='#111';inked=false}
+const pt=e=>{const r=c.getBoundingClientRect();return[e.clientX-r.left,e.clientY-r.top]};
+c.onpointerdown=e=>{draw=true;c.setPointerCapture(e.pointerId);x.beginPath();x.moveTo(...pt(e))};
+c.onpointermove=e=>{if(!draw)return;x.lineTo(...pt(e));x.stroke();inked=true};
+c.onpointerup=c.onpointercancel=()=>draw=false;
+$('#clr').onclick=()=>{x.clearRect(0,0,c.width,c.height);inked=false};
+async function shrink(file){try{const bm=await createImageBitmap(file);const s=Math.min(1,1600/Math.max(bm.width,bm.height));const cv=document.createElement('canvas');cv.width=Math.round(bm.width*s);cv.height=Math.round(bm.height*s);cv.getContext('2d').drawImage(bm,0,0,cv.width,cv.height);return await new Promise(res=>cv.toBlob(b=>res(b||file),'image/jpeg',0.82))}catch(e){return file}}
+async function submit(){const err=$('#err'),f=$('#f');
+ for(const n of [2,3,4]){const e=check(n);if(e){if(n!==4)go(n);err.textContent=e;return}}
+ const fd=new FormData(f);for(const n of ['idFront','idBack','idApp','marineFront','marineBack']){const el=f.elements[n];if(!el||el.disabled)continue;const fl=el.files[0];if(fl)fd.set(n,await shrink(fl),n+'.jpg');else fd.delete(n)}
+ fd.append('agreed','true');fd.append('signature',c.toDataURL('image/png'));
+ $('#next').disabled=true;$('#next').textContent='Submitting...';
+ try{const r=await fetch('/api/c/'+token,{method:'POST',body:fd});const j=await r.json().catch(()=>({}));
+  if(!r.ok)throw new Error(j.error||'Something went wrong. Please try again.');
+  try{sessionStorage.removeItem(KEY)}catch(e){}
+  const first=esc((f.elements.name.value||'').split(' ')[0]);
+  const rows=[];if(SCH.pickup)rows.push('Pickup: <b>'+esc(dt(SCH.pickup))+'</b>'+(SCH.pickupLoc?' at <b>'+esc(SCH.pickupLoc)+'</b>':''));
+  rows.push('Bring the same licence you photographed.');if(SCH.deposit||SCH.bond)rows.push('Make sure your payment and security bond are arranged before pickup.');
+  msg('<div class="okc">&#10003;</div><h2>Thank you'+(first?', '+first:'')+' - you are all set</h2><p>Your signed agreement has been sent to RPM Rental Group.</p><p><b>What happens next</b></p><ul class="next">'+rows.map(r=>'<li>'+r+'</li>').join('')+'</ul><p class="note">If you need to change anything, please contact RPM Rental Group.</p>');
+  $('#nav').classList.add('hide');scrollTo(0,0)}
+ catch(ex){err.textContent=ex.message;$('#next').disabled=false;$('#next').textContent='Sign and submit'}}
+</script></body></html>

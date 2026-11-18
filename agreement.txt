@@ -1,0 +1,409 @@
+DEFINITIONS
+Vehicle: the motor vehicle identified in the Rental Schedule, together with its keys, accessories and equipment
+ supplied with it.
+Serious Breach: a breach expressly described as serious in this Agreement, or any deliberate or material breach
+  creating significant safety, legal, financial or property risk.
+Security Bond: the amount recorded in the Rental Schedule and provided as security for amounts properly payable
+  under this Agreement.
+
+          RPM Rental Group Pty Ltd | Vehicle Rental Agreement                                                                                      Page 1 of 11
+                                                                                                 MOTOR VEHICLE RENTAL AGREEMENT
+
+Rental Period: the period beginning when the Vehicle is handed to the Renter and ending when it is returned to and
+ accepted by the Rental Provider, or earlier terminated under this Agreement.
+Business Day: a day other than Saturday, Sunday or a public holiday in Victoria.
+Authorised Driver: the Renter and any additional driver expressly approved by the Rental Provider before handover
+ and recorded in the Rental Schedule or otherwise approved in writing.
+In this Agreement, unless the context requires otherwise:
+
+1. Parties and Agreement
+This Motor Vehicle Rental Agreement (Agreement) is between RPM Rental Group Pty Ltd (Rental Provider) and the
+person identified as the Renter in the Rental Schedule. The Rental Schedule, these terms, the Vehicle Condition
+Report, any signed authorised-driver details and any written pre-hire approvals form one agreement.
+The Renter confirms that they have had a reasonable opportunity to read this Agreement, ask questions and inspect
+the Vehicle's visible condition before taking possession.
+The Vehicle may be owned or registered by the Rental Provider or by another person or entity that has authorised
+the Rental Provider to arrange the hire. The relevant owner or authorising entity may be identified in the Rental
+Schedule. RPM Rental Group Pty Ltd remains the contracting Rental Provider under this Agreement unless the Rental
+Schedule expressly states otherwise.
+
+2. Eligibility and Authorised Drivers
+2.1 The Renter must be at least 18 years old and hold a current Australian driver licence that is valid for the Vehicle
+   and not suspended, cancelled or subject to a restriction that prevents the hire.
+2.2 Red and green probationary licence holders may hire a Vehicle, but the Renter must not drive the Vehicle on any
+   road or road-related area where doing so would breach a restriction, condition or prohibition applying to the
+   Renter's licence. Learner drivers and international/overseas licences are not accepted.
+2.3 Only the Renter and any additional driver expressly approved by the Rental Provider before handover may drive
+   the Vehicle.
+2.4 The Renter must immediately notify the Rental Provider if any licence becomes suspended, cancelled, restricted or
+   otherwise invalid during the Rental Period.
+2.5 Before handover, the Rental Provider may inspect, photograph and retain a copy or image of the Renter's and each
+   Authorised Driver's driver licence and, where reasonably required, another form of identification, for identity
+   verification, insurer requirements, incident management, debt recovery, toll/infringement nomination and
+   enforcement of this Agreement. Such information must be handled in accordance with clause 21 and applicable
+   law.
+2.6 Where the Vehicle is, or may be, a probationary-prohibited vehicle or otherwise restricted for the Renter's licence
+   class, the Renter must not drive it on a public road or road-related area unless the Renter holds a valid exemption
+   or other lawful authority permitting that use.
+2.7 The Renter warrants that, before driving the Vehicle on a public road or road-related area, the Renter has checked
+   and satisfied themselves that their licence authorises them to drive that specific Vehicle. The Renter must disclose
+   any relevant licence restriction, condition, exemption or special authority before handover.
+2.8 If the Renter relies on a probationary-vehicle exemption or other special authority, the Rental Provider may
+   require satisfactory evidence before permitting road use and may photograph or retain a copy of that evidence
+   together with the licence copy. The Rental Provider may refuse or limit road use if satisfactory evidence is not
+   provided.
+2.9 The Renter is responsible for any infringement, demerit-point consequence, licence sanction, penalty or other
+   consequence arising from the Renter's own unlawful use of the Vehicle or failure to comply with a restriction or
+   condition applying to their licence, except to the extent caused by an unlawful act, misleading representation or
+   other legally non-excludable conduct of the Rental Provider.
+2.10 Nothing in this Agreement authorises or encourages unlawful driving. Permission to hire or take possession of a
+   Vehicle is not a representation that the Vehicle may lawfully be driven by every licence class in every location or
+   circumstance.
+
+         RPM Rental Group Pty Ltd | Vehicle Rental Agreement                                                                            Page 2 of 11
+                                                                                                 MOTOR VEHICLE RENTAL AGREEMENT
+
+3. Rental Price, Deposit, Bond and Payment
+3.1 The rental price, booking deposit, Security Bond, included kilometres and any other variable charges are those
+   completed in the Rental Schedule.
+3.2 The rental price must be paid in full before the Vehicle is handed over. Bank transfer may be accepted, but the
+   Rental Provider may require cleared funds before release of the Vehicle.
+3.3 The Security Bond is security for amounts properly payable under this Agreement. It is not an agreed penalty and
+   is not automatically forfeited merely because a breach occurs.
+3.4 Subject to any substantiated deduction or a reasonable need to retain all or part of the Security Bond while
+   a damage, insurer, toll, infringement or other claim is being assessed, the Rental Provider will initiate
+   return or release of the undisputed balance within 5 Business Days after the Vehicle is returned and
+   inspected. Where a card pre-authorisation is used, the Rental Provider's obligation is to instruct release
+   within that period; the Renter acknowledges that the card issuer or bank may take additional time to make
+   the funds available.
+3.5 Returning the Security Bond does not extinguish a liability that arises or becomes known later, including tolls,
+   infringements, third-party charges, hidden damage reasonably attributable to the Rental Period, insurance
+   excesses or recovery costs.
+3.6 The Security Bond must be provided by the method stated in the Rental Schedule. Where a card pre-authorisation
+   is used, the Renter authorises the Rental Provider or payment provider to place and maintain a temporary hold up
+   to the stated Bond amount and, to the extent lawfully permitted and properly substantiated under this Agreement,
+   to capture amounts that become payable. A pre-authorisation is not itself a charge or automatic forfeiture.
+
+4. Cancellation and No-Show
+4.1 If the Renter cancels at least 12 hours before the agreed pickup time, the booking deposit will be refunded in full.
+4.2 If the Renter cancels less than 12 hours before the agreed pickup time, the Rental Provider may retain 50% of the
+   booking deposit.
+4.3 If the Renter does not attend for pickup and does not contact the Rental Provider within 60 minutes after the
+   agreed pickup time to arrange an extension, the booking may be treated as a no-show and the booking deposit may
+   be retained in full, subject to applicable law.
+4.4 The Rental Provider may cancel the booking before handover if the Vehicle is unavailable because of a mechanical
+   or safety issue, accident, theft, late return by a previous renter, double-booking or fleet allocation error, insurer
+   restriction, legal restriction, or another circumstance that reasonably prevents the hire from proceeding.
+4.5 If the Rental Provider cancels before handover, all rental amounts and booking deposits paid for the cancelled
+   booking will be refunded. The Rental Provider may offer a substitute vehicle, but the Renter is not required to
+   accept it.
+4.6 Except for any right or remedy that cannot lawfully be excluded, the Rental Provider is not liable for indirect or
+   consequential loss arising solely from a cancellation under clause 4.4 where the Rental Provider acts reasonably
+   and refunds the amounts required by clause 4.5.
+
+5. Rental Period, Return and Late Charges
+5.1 The Renter must return the Vehicle to the agreed location by the return date and time in the Rental Schedule
+   unless an extension is approved in writing before the due time.
+5.2 A grace period of 20 minutes applies after the agreed return time. After that grace period, late return
+   charges are calculated by reference to the daily rental rate: more than 20 minutes and up to 5 hours late =
+   50% of one daily rate; more than 5 and up to 12 hours late = 100% of one daily rate; more than 12 and up to 17
+   hours late = 150% of one daily rate; more than 17 and up to 24 hours late = 200% of one daily rate.
+5.3 Late-use charges under clause 5.2 are capped at 300% of one daily rental rate for one continuous overdue
+   period. The cap does not prevent early termination or lawful recovery of the Vehicle, nor recovery of
+   separate, reasonably substantiated loss or recovery costs caused by the overdue possession, provided there
+   is no double recovery.
+5.4 Personal belongings left in the Vehicle remain at the Renter's risk. The Rental Provider will take reasonable care of
+property found and, where contact details are available, make a reasonable attempt to notify the Renter. Property
+may be held for up to 14 days and then disposed of, donated or otherwise dealt with as permitted by law if unclaimed.
+
+         RPM Rental Group Pty Ltd | Vehicle Rental Agreement                                                                            Page 3 of 11
+                                                                                                 MOTOR VEHICLE RENTAL AGREEMENT
+
+Reasonable postage, courier or storage costs requested by the Renter may be deducted from any Security Bond still
+held or invoiced separately.
+
+6. Geographic and Permitted Use
+6.1 The Vehicle must remain within Victoria unless the Rental Provider gives prior written permission for interstate
+   travel.
+6.2 The Vehicle must not be used for rideshare, taxi, food or parcel delivery, courier work, commercial carriage, sub-
+   hire, rental to another person, driver training, motorsport, racing, pace-making, track days, timed events or any
+   unlawful purpose.
+6.3 The Vehicle must not tow any trailer, jet ski or other load unless the Rental Provider has expressly
+   approved towing before handover. Towing may be approved where a jet ski is hired from the Rental
+   Provider, but the approved purpose and any conditions must be recorded in the Rental Schedule or
+   otherwise confirmed in writing. Any jet ski, trailer or marine equipment hired in connection with the
+   booking is subject to a separate hire agreement or addendum; this Agreement governs the motor Vehicle
+   only.
+6.4 The Vehicle must not be driven off-road, on closed roads, through floodwater, on beaches, on unsealed terrain
+   unsuitable for the Vehicle, or in any location where use is likely to cause abnormal damage.
+
+7. Prohibited Conduct
+7.1 The Renter and every Authorised Driver must obey all road laws and drive with reasonable care.
+7.2 The following are prohibited: racing; drifting; burnouts; donuts; deliberate wheelspin; launch-control use;
+   deliberate or sustained loss of traction; hard acceleration for the purpose of breaking traction; disabling or
+   materially reducing traction control or electronic stability control; dangerous overtaking; road-rage conduct;
+   intentional abuse of the engine, gearbox, clutch, tyres, brakes or driveline; and any other deliberate misuse.
+7.3 Traction control and electronic stability control must remain enabled at all times while driving unless the Vehicle
+   manufacturer automatically changes a setting during ordinary operation and the driver has not intentionally
+   disabled it.
+7.4 The Vehicle must not be driven by a person affected by alcohol, illegal drugs, impairing medication, fatigue to an
+   unsafe degree, or any condition that makes driving unlawful or unsafe.
+7.5 No smoking or vaping of any substance is permitted in or immediately beside the Vehicle where smoke or vapour
+   may enter it. No pets or animals are permitted in the Vehicle.
+7.6 No modification, coding, tuning, mechanical adjustment, tyre-pressure alteration outside manufacturer guidance,
+   removal of parts, stickers, badges or plates, or tampering with vehicle systems is permitted without written
+   approval.
+
+8. Speeding, Reckless Driving and Escalation Procedure
+8.1 For this clause, a 'Verified Serious Driving Event' means conduct reasonably supported by GPS/telematics, dashcam
+   footage, vehicle data, police information, eyewitness evidence or a combination of those sources, and includes any
+   prohibited conduct in clause 7 or serious/repeated speeding.
+8.2 Serious/repeated speeding includes, after allowing for reasonable device tolerance: (a) travelling 15 km/h or more
+   above the posted speed limit for 10 continuous seconds or more; (b) travelling 25 km/h or more above the posted
+   speed limit at any time; or (c) three or more separate instances of travelling 10 km/h or more above the posted limit
+   within 15 minutes after a warning has been given.
+8.3 First Verified Serious Driving Event: the Rental Provider may issue a formal warning by telephone, SMS, messaging
+   service or other reasonable method and direct the Renter to immediately stop the conduct.
+8.4 Second Verified Serious Driving Event during the same Rental Period: this is a Serious Breach. The Rental Provider
+   may place the amount shown in the Rental Schedule as the 'Second Driving Event security hold' on hold from the
+   Security Bond pending inspection and assessment. Only amounts reasonably attributable to loss, damage,
+   abnormal wear, mechanical/tyre inspection, recovery, insurer charges or other substantiated consequences of the
+   conduct may ultimately be retained.
+8.5 Third Verified Serious Driving Event during the same Rental Period: the Rental Provider may immediately
+   terminate the hire, direct the Renter to park the Vehicle safely, and lawfully recover the Vehicle without waiting
+   for the original return time.
+         RPM Rental Group Pty Ltd | Vehicle Rental Agreement                                                                            Page 4 of 11
+                                                                                                 MOTOR VEHICLE RENTAL AGREEMENT
+
+8.6 The Rental Provider is not required to wait for a second or third event where the conduct creates an immediate
+   and material safety risk, involves racing, a burnout, drifting, intentional loss of control, police pursuit/evasion,
+   drink/drug driving, deliberate disabling of safety systems while driving aggressively, or other conduct that
+   reasonably justifies immediate termination to protect persons or property.
+8.7 Any remote immobiliser or kill-switch will only be intentionally activated when the Vehicle is stationary and when
+   activation is not reasonably expected to create an immediate road-safety hazard. The Renter must not interfere
+   with recovery after lawful termination.
+
+9. Tracking, Dashcams and Security Systems
+9.1 The Vehicle may contain GPS tracking, telematics, dashcams, diagnostic logging and a remote immobiliser or kill-
+   switch.
+9.2 These systems may be used for theft prevention, location/recovery, safety, investigating accidents or suspected
+   breaches, verifying kilometres, and protecting the Vehicle and the parties' legal rights.
+9.3 Where dashcam audio is enabled, that fact must be disclosed in the Rental Schedule. Audio recording will only be
+   used to the extent permitted by law.
+9.4 The Renter must not cover, disconnect, remove, damage, interfere with or attempt to defeat any tracker, dashcam,
+   telematics device or immobiliser. Tampering is a Serious Breach.
+
+10. Unauthorised Drivers
+10.1 Allowing any person who is not an Authorised Driver to drive or take control of the Vehicle is a Serious Breach.
+10.2 If an unauthorised driver is detected during the Rental Period, the Rental Provider may immediately terminate
+   the hire and lawfully recover the Vehicle.
+10.3 The full Security Bond may be withheld temporarily pending inspection, insurer enquiries and assessment of
+   loss. It is not automatically forfeited. The Rental Provider may apply the Bond to amounts properly payable under
+   this Agreement, including damage, insurance excess, recovery, towing, storage, loss of use reasonably caused by
+   the breach, and other substantiated loss to the extent permitted by law.
+10.4 The Renter remains responsible for the acts and omissions of any person to whom the Renter gives possession,
+   access or control of the Vehicle, to the extent permitted by law.
+
+11. Fuel, Kilometres and Consumables
+11.1 Unless the Rental Schedule records otherwise, the Vehicle is supplied with a full tank and must be returned with
+   a full tank of the correct fuel.
+11.2 If the Vehicle is not returned full, the Rental Provider may refuel it and deduct the reasonable actual fuel cost
+   from the Security Bond or invoice the Renter after return.
+11.3 The Renter must use the manufacturer's required fuel grade. Any loss caused by wrong fuel or contamination is
+   payable by the Renter to the extent caused by that conduct.
+11.4 If the Renter exceeds the included kilometres in the Rental Schedule, the excess kilometre rate shown there
+   applies.
+11.5 For an electric or plug-in hybrid Vehicle, the Vehicle must be returned with at least the state of charge specified in
+the Rental Schedule or, if none is specified, no less than the handover state of charge. If returned below that level, the
+Renter must pay the reasonable actual charging cost plus any recharge service fee expressly stated in the Rental
+Schedule.
+11.6 Any charging cable, portable charger, adapter or related accessory supplied with an electric Vehicle must be
+returned in the same condition, fair wear and tear excepted. Loss or damage may be charged at the reasonable
+replacement or repair cost.
+
+12. Cleaning and Interior Condition
+12.1 Ordinary light use and ordinary road dust do not require a deep clean.
+12.2 If the Vehicle is returned with visible staining, significant spills, excessive rubbish, pet/animal hair,
+   cigarette butts, ash, smoke residue or odour, or other objectively excessive contamination caused during the
+   Rental Period, the Renter is liable for a cleaning/remediation charge of up to $500 based on the actual or
+   reasonable estimated cost of restoring the Vehicle to its pre-hire condition, subject to applicable law.
+
+         RPM Rental Group Pty Ltd | Vehicle Rental Agreement                                                                            Page 5 of 11
+                                                                                                 MOTOR VEHICLE RENTAL AGREEMENT
+
+12.3 If the reasonable documented cost of professional cleaning, deodorising, stain treatment, smoke
+   remediation, disassembly, repair or replacement exceeds $500, the Renter is liable for the higher
+   substantiated amount. The Rental Provider will provide reasonable supporting evidence such as a quote,
+   invoice, photographs or video where requested or where a deduction is disputed.
+12.4 This clause does not make the Renter liable for pre-existing contamination or fair wear and tear.
+
+13. Vehicle Condition, Tyres, Wheels, Keys and Accessories
+13.1 The parties should complete the Vehicle Condition Report and may make a dated video/photo walkthrough of the
+   exterior, interior, wheels and tyres at handover and return.
+13.2 The Renter is not responsible for pre-existing damage recorded before handover, fair wear and tear, or
+   mechanical defects not caused or contributed to by the Renter.
+13.3 The Renter is responsible, to the extent caused during the Rental Period by the Renter, an Authorised Driver, an
+   unauthorised driver allowed by the Renter, or a breach of this Agreement, for damage to tyres, wheels/rims, glass,
+   bodywork, underbody, roof, interior, trim, screens, controls, keys, remotes, accessories and supplied equipment.
+13.4 Lost or damaged keys/remotes may be charged at the reasonable replacement, programming and associated
+   recovery cost.
+
+14. Accidents, Damage, Theft and Incident Procedure
+14.1 After any accident, impact, theft, attempted theft, vandalism, significant warning light, tyre failure or other
+   material incident, the Renter must stop safely, protect persons and property, call emergency services where
+   required, and notify the Rental Provider as soon as reasonably practicable.
+14.2 The Renter must obtain the other parties' names, addresses, phone numbers, registration numbers and insurer
+   details where reasonably possible; take photographs/video; identify witnesses; and provide a truthful written
+   account if requested.
+14.3 The Renter must not admit liability, promise payment, settle a claim or authorise repairs on the Rental Provider's
+   behalf without permission, except for urgent steps reasonably necessary to protect safety.
+14.4 The Renter must cooperate reasonably with the Rental Provider and any insurer, repairer, assessor, police or
+   recovery provider dealing with the incident.
+
+15. Insurance and Excess
+15.1 This Agreement does not itself provide insurance. Any insurance applicable to the Vehicle is subject to the terms,
+   exclusions, driver requirements and excesses of the relevant policy.
+15.2 Where an insured event occurs and the Renter or an Authorised Driver is responsible for, causes or contributes to
+   the event, the Renter must pay the applicable insurance excess shown in the Rental Schedule, together with any
+   additional age, provisional-licence, inexperienced-driver or other excess that applies because of the driver or
+   circumstances, to the extent permitted by law. Any young/inexperienced-driver threshold or special criterion
+   relevant to that booking should be recorded in the Rental Schedule.
+15.3 If an insurer lawfully refuses or reduces cover because of a breach by the Renter or a driver for whom the Renter
+   is responsible - including an unauthorised driver, driving contrary to licence conditions or probationary-vehicle
+   restrictions, drink/drug driving, racing, deliberate misuse or material non-disclosure - the Renter is liable for the
+   resulting uninsured loss to the extent that the refusal or reduction was caused by or reasonably connected with
+   that conduct, subject to applicable law.
+15.4 Nothing in this Agreement excludes any consumer guarantee, statutory right or liability that cannot lawfully be
+   excluded.
+15.5 If the Vehicle is declared a total loss or write-off, or is damaged so seriously that it cannot reasonably continue in
+   service, the hire terminates when the Vehicle ceases to be available for use. The Security Bond may be applied
+   toward amounts properly payable under this Agreement, including an applicable insurance excess and other
+   substantiated loss.
+15.6 The Renter is not automatically liable for the Vehicle's full market value or for an insurer's settlement shortfall
+   merely because a total loss occurs. However, to the extent permitted by law, the Renter is liable for an uninsured
+   shortfall where and to the extent that the shortfall was caused by the Renter's breach, negligence, unlawful
+   conduct, deliberate misuse, an unauthorised driver permitted by the Renter, or conduct that caused the insurer
+   lawfully to reduce or refuse cover.
+         RPM Rental Group Pty Ltd | Vehicle Rental Agreement                                                                            Page 6 of 11
+                                                                                                 MOTOR VEHICLE RENTAL AGREEMENT
+
+15.7 Any insurance proceeds, salvage proceeds, third-party recoveries or other amounts received for the same loss
+   must be credited when calculating any amount claimed from the Renter. The Rental Provider is not entitled to
+   double recovery.
+
+16. Fines, Tolls, Impoundment and Government Charges
+16.1 The Renter is responsible for tolls, parking charges, traffic infringements, speeding infringements, camera
+   offences, probationary-vehicle or licence-condition offences, and other government or road-user charges
+   attributable to the Rental Period or the Renter's use of the Vehicle, except to the extent liability cannot lawfully be
+   passed on.
+16.2 The Renter must tell the Rental Provider as soon as reasonably practicable if they know they incurred a toll or
+   infringement.
+16.3 If a toll, fine or charge is received after the Vehicle has been returned or after the Security Bond has been
+   refunded, the Renter remains liable and must reimburse the Rental Provider within 7 days after receiving
+   reasonable evidence of the amount.
+16.4 The Renter is also liable for reasonable actual administration, nomination, towing, storage, release or recovery
+   costs incurred because of an infringement, impoundment or seizure caused by the Renter or a driver for whom the
+   Renter is responsible.
+
+17. Breakdowns and Mechanical Issues
+17.1 The Renter must stop safely and contact the Rental Provider if a warning light, abnormal noise, overheating,
+   puncture, mechanical fault or other issue may make continued driving unsafe or cause damage.
+17.2 No repair may be authorised or carried out at the Rental Provider's expense without prior approval, except
+   where an emergency repair is reasonably necessary to protect safety and prior approval cannot reasonably be
+   obtained.
+17.3 The Rental Provider is responsible for ordinary mechanical failure not caused or contributed to by the Renter,
+   subject to applicable law. The Renter is responsible for damage or cost caused by misuse, wrong fuel, ignoring
+   warnings, continuing to drive when unsafe, impact damage or other breach.
+17.4 For roadside assistance, the Renter must first contact the Rental Provider using the Provider contact details in the
+Rental Schedule unless an emergency requires immediate action. If a roadside assistance provider or number is listed
+in the Rental Schedule, the Renter may also contact that provider as directed. The Renter must not arrange non-
+emergency towing or repair at the Rental Provider's expense without approval.
+
+18. Termination and Recovery Rights
+18.1 The Rental Provider may terminate the Rental Period early where the Renter commits a Serious Breach, fails to
+   return the Vehicle, leaves Victoria without approval, permits an unauthorised driver, tampers with
+   tracking/security systems, uses the Vehicle unlawfully, fails to pay an amount due before handover, or engages in
+   conduct creating a material risk to persons or property.
+18.2 On termination, the Renter must immediately cease use, park the Vehicle safely as directed, secure it, provide its
+   location and keys, and allow lawful recovery.
+18.3 The Renter must reimburse reasonable towing, recovery, transport and storage costs caused by the Renter's
+   Serious Breach, to the extent permitted by law.
+18.4 The Rental Provider will exercise recovery rights lawfully and will not intentionally create a road-safety hazard.
+
+19. Security Bond Deductions and Evidence
+19.1 The Rental Provider may apply the Security Bond only toward amounts properly payable under this Agreement,
+   including unpaid rent/late charges, excess kilometres, fuel, substantiated cleaning/remediation, damage, insurance
+   excess, lost keys/accessories, tolls/fines, and reasonable recovery costs.
+19.2 Where a deduction is not a fixed amount already known and agreed in the Rental Schedule, the Rental Provider
+   will provide an itemised explanation and reasonable supporting evidence such as photographs, video, a quote,
+   invoice, assessment, infringement notice or toll statement.
+19.3 The Renter may dispute a proposed or completed deduction by giving written reasons and any supporting
+   evidence. The parties must deal with the dispute in good faith.
+
+         RPM Rental Group Pty Ltd | Vehicle Rental Agreement                                                                            Page 7 of 11
+                                                                                                 MOTOR VEHICLE RENTAL AGREEMENT
+
+20. Liability, Indemnity and Consumer Law
+20.1 The Renter is liable for loss or damage that is caused by the Renter's breach, negligence, unlawful conduct or
+   misuse, or by a person for whom the Renter is responsible, subject to this Agreement, applicable insurance and
+   law.
+20.2 To the extent permitted by law, the Renter indemnifies the Rental Provider against third-party claims, loss and
+   reasonable expense caused by the Renter's unlawful use, breach, negligence or deliberate misuse of the Vehicle.
+   This indemnity does not apply to loss caused by the Rental Provider's negligence, breach of law, pre-existing defect,
+   or a matter for which liability cannot lawfully be excluded.
+20.3 Nothing in this Agreement excludes, restricts or modifies rights or remedies under the Australian Consumer Law
+   or any other law where that exclusion, restriction or modification would be unlawful.
+
+21. Privacy and Personal Information
+21.1 The Rental Provider may collect and use identification, licence, contact, payment, booking, vehicle-location,
+   telematics, incident and condition information for administering the hire, protecting and recovering the Vehicle,
+   processing claims, complying with law, resolving disputes and enforcing this Agreement.
+21.2 Information may be disclosed where reasonably necessary to insurers, police, road/toll authorities,
+   courts/tribunals, lawyers, recovery providers, repairers, payment providers and other service providers involved
+   in the hire or a claim, subject to applicable privacy and surveillance laws.
+21.3 Licence and identification copies may be retained for so long as reasonably necessary for the purposes in this
+   Agreement, insurer or legal requirements, or an unresolved claim, toll, infringement, debt or dispute, and should
+   then be securely destroyed or de-identified when no longer reasonably required, subject to applicable law.
+
+22. Notices
+22.1 A notice or approval under this Agreement may be given in writing by SMS, email, messaging application
+   or signed document to the contact details provided in the Rental Schedule or subsequently notified in
+   writing by either party. The Rental Provider's notice details are the Provider mobile and Provider email
+   recorded in the Rental Schedule.
+22.2 Urgent safety or recovery directions may also be given by telephone and confirmed in writing as soon as
+   reasonably practicable.
+
+23. Disputes
+23.1 A party who disputes a charge, deduction or alleged breach must give the other party reasonable details of the
+   dispute and any supporting evidence.
+23.2 The parties must first attempt in good faith to resolve the dispute directly. This clause does not prevent either
+   party from seeking urgent relief or exercising any right to approach Consumer Affairs Victoria, VCAT, a court or
+   another competent authority.
+
+24. Force Majeure
+24.1 Neither party is liable for delay or failure to perform an obligation, other than an obligation to pay an amount
+already due, to the extent caused by an event beyond that party's reasonable control, including severe weather, flood,
+fire, natural disaster, road closure, government restriction, civil emergency, widespread infrastructure failure, or
+other comparable event that could not reasonably have been prevented or overcome.
+24.2 A party affected by such an event must take reasonable steps to reduce its impact and notify the other party as
+soon as reasonably practicable. This clause does not excuse payment obligations that accrued before the event or
+liability for a party's own negligence, breach or unlawful conduct.
+24.3 If a force majeure event prevents handover before the Rental Period begins, the Rental Provider will
+refund amounts paid for the affected booking in accordance with clause 4. If it materially interrupts a hire
+already in progress, the parties will act reasonably to arrange return, recovery or a substitute vehicle if
+available.
+
+         RPM Rental Group Pty Ltd | Vehicle Rental Agreement                                                                            Page 8 of 11
+                                                                                                  MOTOR VEHICLE RENTAL AGREEMENT
+
+25. General
+25.1 This Agreement is governed by the laws of Victoria, Australia. The parties submit to the courts and tribunals
+   having jurisdiction in Victoria.
+25.2 If a term is invalid, unenforceable or void, it is severed to the minimum extent necessary and the remainder of
+   the Agreement continues to operate where legally possible.
+25.3 A waiver is effective only if given expressly. A delay in enforcing a right does not by itself waive that right.
+25.4 Any variation to a material commercial term must be agreed in writing. Pre-hire approvals may be recorded by
+   SMS, email or other written message.
+25.5 Headings are for convenience only. 'Including' is not limiting. 'Vehicle' includes keys, accessories and equipment
+   supplied with it. 'Serious Breach' includes the breaches expressly described as serious in this Agreement and any
+   other deliberate or material breach creating significant safety, legal, financial or property risk.
